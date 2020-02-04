@@ -1,0 +1,43 @@
+.blocx-slider_body {
+    max-height: 378px;
+}
+.blocx-slider_block {
+    max-height: 378px;
+}
+.blocx-slider_block .blocx-slider_block_content {
+    left: 35%;
+    width: 150px;
+    font-size: 18px;
+    line-height: 52px;
+    color: #2699FB;
+    /* text-align: left; */
+}
+.pads {
+    padding-left: 25px;
+    /* padding-right: 25px; */
+}
+.blocx-card .blocx-card_body {
+    padding: 0px 0px 25px 0px;
+}
+.blocx-card_links {
+    right: auto;
+    left: 0px;
+    position: initial;
+    padding-left: 10px;
+}
+.blocx-card .blocx-card_links .share-link {
+    right: auto;
+    left: 0px;
+    position: initial;
+    padding-left: 10px;
+}
+.blocx-card .blocx-card_text {
+     text-align: left;
+    /*font: Regular 14px/24px Acumin Pro;
+    letter-spacing: 0;*/
+    color: #2B2826;
+    /*opacity: 1;
+    left: 54px; */
+    padding-left: 10px;
+    padding-right: 6px;
+}

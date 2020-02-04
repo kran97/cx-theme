@@ -1,0 +1,48 @@
+{
+    "hero": [
+          {
+                "id": "0",
+                "image": "/assets/images/Image@2x.png"
+          },
+          {
+                "id": "1",
+                "image": "/assets/images/Image@2x_1.png"
+          },
+          {
+                "id": "2",
+                "image": "/assets/images/Image@2x.png"
+          }
+    ],
+    "nav": [
+        {
+            "id": "0",
+            "label": "Global Site",
+            "url": "/page13"
+        },
+        {
+            "id": "1",
+            "label": "Contact Us",
+            "url": "#/"
+        },
+        {
+            "id": "2",
+            "label": "FAQ's",
+            "url": "#/"
+        },
+        {
+            "id": "3",
+            "label": "BOOK APPOINTMENT",
+            "url": "#/"
+        },
+        {
+            "id": "4",
+            "label": "BOOK HEALTH CHECKUP",
+            "url": "#/"
+        },
+        {
+            "id": "5",
+            "label": "CONSULT ONLINE",
+            "url": "#/"
+        }
+    ]
+}

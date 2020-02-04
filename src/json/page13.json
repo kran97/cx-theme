@@ -1,0 +1,58 @@
+{
+    "items": [
+        {
+            "id": "0",
+            "label": "Global Site",
+            "url": "#/"
+        },
+        {
+            "id": "1",
+            "label": "Contact Us",
+            "url": "#/"
+        },
+        {
+            "id": "2",
+            "label": "FAQ's",
+            "url": "#/"
+        },
+        {
+            "id": "3",
+            "label": "ABOUT US",
+            "url": "/page14"
+        },
+        {
+            "id": "4",
+            "label": "PRODUCTS",
+            "url": "#/"
+        },
+        {
+            "id": "5",
+            "label": "INNOVATION",
+            "url": "#/"
+        },
+        {
+            "id": "6",
+            "label": "HUMAN PHARMA",
+            "url": "#/"
+        },
+        {
+            "id": "7",
+            "label": "CAREERS",
+            "url": "#/"
+        }
+    ],
+    "hero": [
+        {
+              "id": "0",
+              "image": "/assets/images/Image@2x.png"
+        },
+        {
+              "id": "1",
+              "image": "/assets/images/Image@2x_1.png"
+        },
+        {
+              "id": "2",
+              "image": "/assets/images/Image@2x.png"
+        }
+  ]
+}

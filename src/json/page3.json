@@ -1,0 +1,85 @@
+{
+    "dropdown":[
+    {"value":"React"},
+    {"value":"React"},
+    {"value":"React"},
+    {"value":"React"}
+    ],
+
+    "pagination":[
+        {
+            "id": "0",
+            "first_name": "capgemini",
+            "last_name": "Epip"
+        },
+        {
+            "id": "1",
+            "first_name": "capgemini",
+            "last_name": "Ecospace"
+        },
+        {
+            "id": "2",
+            "first_name": "capgemini",
+            "last_name": "Manyata"
+        },
+        {
+            "id": "3",
+            "first_name": "capgemini",
+            "last_name": "Epip"
+        },
+        {
+            "id": "4",
+            "first_name": "capgemini",
+            "last_name": "Epip"
+        },
+        {
+            "id": "5",
+            "first_name": "capgemini",
+            "last_name": "Epip"
+        },
+        {
+            "id": "6",
+            "first_name": "capgemini",
+            "last_name": "Epip"
+        },
+        {
+            "id": "7",
+            "first_name": "capgemini",
+            "last_name": "Epip"
+        },
+        {
+            "id": "8",
+            "first_name": "capgemini",
+            "last_name": "Epip"
+        }
+    ],
+
+    "cards":{
+        "items": [
+            {
+                "id": "0",
+                "title": "Medical Pharma",
+                "text": "Examiness and Cures",
+                "image": "../../card1.png"
+            },
+            {
+                "id": "1",
+                "title": "Title 2",
+                "text": "Lorem Ipsum is simply dummy text",
+                "image": "../../card2.png"
+            },
+            {
+                "id": "2",
+                "title": "Title 3",
+                "text": "Lorem Ipsum is simply dummy text",
+                "image": "../../card3.png"
+            },
+            {
+                "id": "3",
+                "title": "Title 3",
+                "text": "Lorem Ipsum is simply dummy text",
+                "image": "../../card4.png"
+            }
+        ]
+    }
+}

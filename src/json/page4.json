@@ -1,0 +1,80 @@
+{
+    "tab": [
+        {
+            "id": "0",
+            "label": "How it Works",
+            "contentTitle": "Title 1",
+            "contentText": "Lorem Ipsum is simply dummy text",
+            "isActive": true,
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+        },
+        {
+            "id": "1",
+            "label": "Direction for Use",
+            "contentTitle": "Title 2",
+            "contentText": "Lorem Ipsum is simply dummy text",
+            "isActive": false
+        },
+        {
+            "id": "2",
+            "label": "Diet Plan",
+            "contentTitle": "Title 3",
+            "contentText": "Lorem Ipsum is simply dummy text",
+            "isActive": false,
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+        }
+    ],
+
+    "table": [
+        {
+            "id": "0",
+            "name": "Anoop",
+            "label": "BASIC INFO",
+            "email": "anoop.capgemini.com",
+            "company": "Capgemini",
+            "phone": "+91 854646464",
+            "tags": "stackholder",
+            "date": "12/02/2019"
+        },
+        {
+            "id": "1",
+            "name": "Aravind",
+            "label": "COMPANY",
+            "email": "aravind.accenture.com",
+            "company": "Accenture",
+            "phone": "+91 854646464",
+            "tags": "stackholder",
+            "date": "12/02/2019"
+        },
+        {
+            "id": "2",
+            "name": "Raghu",
+            "label": "PHONE",
+            "email": "raghu.Micromax.com",
+            "company": "JP MORGAN",
+            "phone": "+91 854646464",
+            "tags": "stackholder",
+            "date": "12/02/2019"
+        },
+        {
+            "id": "3",
+            "name": "Shashi",
+            "label": "TAGS",
+            "email": "shashi.tcs.com",
+            "company": "TCS",
+            "phone": "+91 854646464",
+            "tags": "stackholder",
+            "date": "12/02/2019"
+        },
+        {
+            "id": "4",
+            "name": "Anoop",
+            "label": "CREATED DATE",
+            "email": "anoop.capgemini.com",
+            "company": "Capgemini",
+            "phone": "+91 854646464",
+            "tags": "stackholder",
+            "date": "12/02/2019"
+        }
+    ]
+}

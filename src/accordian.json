@@ -1,0 +1,28 @@
+{
+    "items": [
+        {
+            "id": "0",
+            "contentTitle": "Title 1",
+            "contentText": "Lorem Ipsum is simply dummy text",
+            "isOpened": true
+        },
+        {
+            "id": "1",
+            "contentTitle": "Title 2",
+            "contentText": "Lorem Ipsum is simply dummy text",
+            "isOpened": false
+        },
+        {
+            "id": "2",
+            "contentTitle": "Title 3",
+            "contentText": "Lorem Ipsum is simply dummy text",
+            "isOpened": false
+        },
+        {
+            "id": "3",
+            "contentTitle": "Title 4",
+            "contentText": "Lorem Ipsum is simply dummy text",
+            "isOpened": false
+        }
+    ]
+}

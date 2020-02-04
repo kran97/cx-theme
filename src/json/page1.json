@@ -1,0 +1,131 @@
+{
+    "cardDetails": [
+        {
+            "id": "0",
+            "title": "Healthy weight loss shake",
+            "text": "Nutritionally complete 31g High quality protein for optimal health B-Vitamins for energy release† Scientifically Proven",
+            "image": "../../card1.png"
+        },
+        {
+            "id": "1",
+            "title": "XLS-Medical Max Strength Sachets",
+            "text": "33% more effective The first slimming aid that reduces calorie intake from main nutrients: Carbohydrates, Sugar and Fat Clinically proven",
+            "image": "../../card2.png"
+        },
+        {
+            "id": "2",
+            "title": "Hunger Buddy by XLS-Medical",
+            "text": "Helps to fight food cravings and snack attacks Helps to cut portion sizes Promotes satiety while being gentle on the system Comes in a handy and easy to use push dispenser",
+            "image": "../../card3.png"
+        },
+        {
+            "id": "3",
+            "title": "Hunger Buddy by ZLS-Medical",
+            "text": "Helps to fight food cravings and snack attacks Helps to cut portion sizes Promotes satiety while being gentle on the system Comes in a handy and easy to use push dispenser",
+            "image": "../../card4.png"
+        }
+    ],
+    "navbar":[
+        {
+            "id": "0",
+            "label": "OUR PRODUCTS",
+            "url": "/page3"
+        },
+        {
+            "id": "1",
+            "label": "DIET TIPS & ADVICE",
+            "url": "#/"
+        },
+        {
+            "id": "2",
+            "label": "SUCCESS STORIES",
+            "url": "/page6"
+        },
+        {
+            "id": "3",
+            "label": "GLOBAL SITE",
+            "url": "/page13"
+        },
+        {
+            "id": "4",
+            "label": "CONTACT US",
+            "url": "#/"
+        },
+        {
+            "id": "5",
+            "label": "FAQS",
+            "url": "#/"
+        }
+    ],
+    "hero":[
+        {
+            "id": "0",
+            "title": "Medical Pharma",
+            "text": "Examiness and Cures",
+            "image": "./page1.png"
+        },
+        {
+            "id": "1",
+            "title": "Title 2",
+            "text": "Lorem Ipsum is simply dummy text",
+            "image": "https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg"
+        },
+        {
+            "id": "2",
+            "title": "Title 3",
+            "text": "Lorem Ipsum is simply dummy text",
+            "image": "/assets/images/blocx-carousel_img-3.jpg"
+        }
+    ],
+    "footer": {
+        "footerMenu1": [
+            {
+                "id": "0",
+                "label": "Home",
+                "url":"/"
+            },
+            {
+                "id": "1",
+                "label": "Products",
+                "url":"/page3"
+            },
+            {
+                "id": "2",
+                "label": "Success stories",
+                "url":"/page6"
+            },
+            {
+                "id": "3",
+                "label": "Diet tips & advice"
+            }
+        ],
+        "footerMenu2": [
+            {
+                "id": "0",
+                "label": "Recipies"
+            },
+            {
+                "id": "1",
+                "label": "BMI calculator"
+            },
+            {
+                "id": "2",
+                "label": "Contact us"
+            },
+            {
+                "id": "3",
+                "label": "FAQS"
+            }
+        ],
+        "footerMenu3": [
+            {
+                "id": "0",
+                "label": "Terms and Conditions"
+            },
+            {
+                "id": "1",
+                "label": "Site Map"
+            }
+        ]
+    }
+}
