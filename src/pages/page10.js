@@ -113,7 +113,7 @@ export default class UserForm extends Component {
     let myObject = {}
     sessionStorage.myObject = JSON.stringify(this.info);
     sessionStorage.setItem(myObject, sessionStorage.myObject)
-    this.props.history.push("/page11");
+    this.props.history.push("/confirm_appoinment");
   }
   handleButtonClick = (e) => {
     console.log(e);

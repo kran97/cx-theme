@@ -29,7 +29,7 @@
         {
             "id": "0",
             "label": "OUR PRODUCTS",
-            "url": "/page3"
+            "url": "/products"
         },
         {
             "id": "1",
@@ -39,12 +39,12 @@
         {
             "id": "2",
             "label": "SUCCESS STORIES",
-            "url": "/page6"
+            "url": "/success_stories"
         },
         {
             "id": "3",
             "label": "GLOBAL SITE",
-            "url": "/page13"
+            "url": "/global_site"
         },
         {
             "id": "4",
@@ -87,12 +87,12 @@
             {
                 "id": "1",
                 "label": "Products",
-                "url":"/page3"
+                "url":"/products"
             },
             {
                 "id": "2",
                 "label": "Success stories",
-                "url":"/page6"
+                "url":"/success_stories"
             },
             {
                 "id": "3",
