@@ -64,7 +64,7 @@ import page1json from '../json/page1.json';
       </div>
       <BlocxDivider
             height={1}
-            width={100}
+            width={99}
             widthInPer={true}
             color="#E3E3E3"
             type="horizontal"
