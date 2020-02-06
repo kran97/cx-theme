@@ -99,7 +99,7 @@ export default class Page8 extends React.Component {
                 activeStep: activeStep + 1
             })
         }
-        this.props.history.push("/page10");
+        this.props.history.push("/doctor_select");
         
     }
     

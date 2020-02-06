@@ -1,0 +1,22 @@
+{
+    "items": [
+        {
+            "id": "0",
+            "title": "",
+            "text": "",
+            "image": "/assets/images/page8bg.png"
+        },
+        {
+            "id": "1",
+            "title": "",
+            "text": "",
+            "image": "/assets/images/group2.png"
+        },
+        {
+            "id": "2",
+            "title": "",
+            "text": "",
+            "image": "/assets/images/group1.png"
+        }
+    ]
+}

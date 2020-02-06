@@ -15,6 +15,7 @@ import Page6  from './pages/page6';
 import Page7 from './pages/page7';
 import Page8 from './pages/page8';
 import Page5 from './pages/page5';
+import Page9 from './pages/page9';
 // import Test from './pages/testing';
 // function App() {
 //   return(
@@ -29,17 +30,19 @@ class App extends Component{
         <Switch>
         <Route exact path="/" component={Page1} />
         {/* <Route path="/page1" component={Page1} /> */}
-        <Route path="/page3" component={Page3} />
-        <Route path="/page4" component={Page4} />
+        <Route path="/products" component={Page3} />
+        <Route path="/buy products" component={Page4} />
         <Route path="/page5" component={Page5} />
-          <Route path="/page10" component={UserForm} />
-          <Route path="/page11" component={User} />
-          <Route path="/page13" component={Page13} />
+          <Route path="/book_appoinment" component={UserForm} />
+          <Route path="/confirm_appoinment" component={User} />
+          <Route path="/global_site" component={Page13} />
           <Route path="/page14" component={Page14} />
           <Route path="/modal" component={WModal} />  
-          <Route path="/page6" component={ Page6 } />
-          <Route path="/page7" component={ Page7 } />
-          <Route path="/page8" component={ Page8 } />
+          <Route path="/success_stories" component={ Page6 } />
+          <Route path="/my_story" component={ Page7 } />
+          <Route path="/doctor_appoinment" component={ Page8 } />
+          <Route path="/doctor_select" component={ Page9 } />
+
         </Switch>
       </div >
     </Router>

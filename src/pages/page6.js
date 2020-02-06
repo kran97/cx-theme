@@ -160,7 +160,7 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
                                 <br></br>
 
                                 <div className="blocx-card_links">
-                                    <Link to="/page7" className="linkTo">
+                                    <Link to="/my_story" className="linkTo">
                                     <a className="share-link" href="">Read More</a>
                                     </Link>
                                 </div>
@@ -188,7 +188,7 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
 
                                 <div className="blocx-card_links">
 
-                                <Link to="/page7" className="linkTo">
+                                <Link to="/my_story" className="linkTo">
                                     <a className="share-link" href="">Read More</a>
                                     </Link>
 
@@ -217,7 +217,7 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
 
                                 <div className="blocx-card_links">
 
-                                <Link to="/page7" className="linkTo">
+                                <Link to="/my_story" className="linkTo">
                                     <a className="share-link" href="">Read More</a>
                                     </Link>
 
@@ -246,7 +246,7 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
 
                                 <div className="blocx-card_links">
 
-                                <Link to="/page7" className="linkTo">
+                                <Link to="/my_story" className="linkTo">
                                     <a className="share-link" href="">Read More</a>
                                     </Link>
 
@@ -275,7 +275,7 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
 
                                 <div className="blocx-card_links">
 
-                                <Link to="/page7" className="linkTo">
+                                <Link to="/my_story" className="linkTo">
                                     <a className="share-link" href="">Read More</a>
                                     </Link>
 
@@ -304,7 +304,7 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
 
                                 <div className="blocx-card_links">
 
-                                <Link to="/page7" className="linkTo">
+                                <Link to="/my_story" className="linkTo">
                                     <a className="share-link" href="">Read More</a>
                                     </Link>
 
@@ -333,7 +333,7 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
 
                                 <div className="blocx-card_links">
 
-                                <Link to="/page7" className="linkTo">
+                                <Link to="/my_story" className="linkTo">
                                     <a className="share-link" href="">Read More</a>
                                     </Link>
 
@@ -362,7 +362,7 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
 
                                 <div className="blocx-card_links">
 
-                                <Link to="/page7" className="linkTo">
+                                <Link to="/my_story" className="linkTo">
                                     <a className="share-link" href="">Read More</a>
                                     </Link>
 

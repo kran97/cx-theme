@@ -22,7 +22,7 @@ import page1json from '../json/page1.json';
     }
   renderRedirect=()=>{
       if (this.state.redirect) {
-        return <Redirect to='/page4' />
+        return <Redirect to='/buy products' />
       }
     }
   render(){

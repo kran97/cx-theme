@@ -1,0 +1,30 @@
+{
+
+    "items": [{
+
+        "id": "0",
+
+        "label": "BOOK APPOINTMENT",
+
+        "url": "#/"
+
+    }, {
+
+        "id": "1",
+
+        "label": "BOOK HEALTH CHECKUP",
+
+        "url": "#/"
+
+    }, {
+
+        "id": "2",
+
+        "label": "CONSULT ONLINE",
+
+        "url": "#/"
+
+    }
+]
+
+}
