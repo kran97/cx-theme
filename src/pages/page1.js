@@ -52,7 +52,7 @@ import page1json from '../json/page1.json';
      eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</BlocxCardText.Text>
             <br></br>
            <div className="blocx-card_links">
-              <BlocxButton.Primary label="Buy Now" className="cardButton" ></BlocxButton.Primary>
+              <BlocxButton.Primary label="Buy Now" className="cardButton" onClick={()=>this.props.history.push("/products")} ></BlocxButton.Primary>
             </div>
          </BlocxCardBody.Default>
 
@@ -81,7 +81,7 @@ import page1json from '../json/page1.json';
             <p>Scarlet - 21lbs*</p>
             <div className="blocx-grid" className="midBody-button">
               <div className="col-md-3"><BlocxButton.Primary label="MY STORY" className="btn2"></BlocxButton.Primary></div>
-              <div className="col-md-5"><BlocxButton.Primary label="ALL OUR SUCCESS STORIES" className="btn2" onClick={()=>this.props.history.push("/page6")}></BlocxButton.Primary></div>
+              <div className="col-md-5"><BlocxButton.Primary label="ALL OUR SUCCESS STORIES" className="btn2" onClick={()=>this.props.history.push("/success_stories")}></BlocxButton.Primary></div>
             </div>
           </div>
         </div>
