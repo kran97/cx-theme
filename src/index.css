@@ -347,20 +347,14 @@ color: #A6ADB4;
 }
 
 .headingtext{
-margin-left: 139px;
-margin-right: 139px;
 text-align: left;
 font: Bold 32px/38px Helvetica;
 }
 .subheadingtext{
-margin-left: 139px;
-margin-right: 139px;
 text-align: left;
 font: Bold 32px/38px Helvetica;
 }
 .subsubheadingtext{
-  margin-left: 139px;
-  margin-right: 139px;
   text-align: left;
   font: Bold 23px/27px Helvetica;
   }
@@ -389,6 +383,14 @@ width: 352px;
 .blocx-menu {
     text-transform: lowercase;  
 }
+.errormessage{
+  color: red;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+.blocx-input-group{
+  margin-bottom: 0px;
+}
 
 .blocx-slider_block{
   max-height:378px; 
@@ -415,8 +417,6 @@ width: 352px;
   margin-left: 20px;
 }
 .maintext{
-  margin-left: 139px;
-  margin-right: 139px;
   text-align: justify;
   font: Regular 16px/26px Helvetica;
   color: #A6ADB4;

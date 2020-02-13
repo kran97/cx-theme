@@ -2,43 +2,25 @@
 import React, { Component } from 'react';
 
 
-import { BlocxTextInput } from "blocx-react-fullbundle";
-import { BlocxNavBar } from "blocx-react-fullbundle";
-import { BlocxButton } from "blocx-react-fullbundle";
-import { BlocxFooter, BlocxFooterBody } from 'blocx-react-fullbundle'
-import { BlocxHero, BlocxHeroBody, BlocxHeroCarousel } from "blocx-react-fullbundle";
-import { BlocxProgressIndicator } from 'blocx-react-fullbundle'
+import { BlocxTextInput } from "blocx-react-components";
+import { BlocxNavBar } from "blocx-react-components";
+import { BlocxButton } from "blocx-react-components";
+import { BlocxFooter, BlocxFooterBody } from "blocx-react-components";
+import { BlocxHero, BlocxHeroBody, BlocxHeroCarousel } from "blocx-react-components";
+import { BlocxProgressIndicator } from "blocx-react-components";
 import { Link } from 'react-router-dom';
 import page10json from '../json/page10.json';
 import page1json from '../json/page1.json';
 export default class UserForm extends Component {
 
-
-
-  // changeHandler = event => {
-  //   this.setState({
-  //     email: event.target.value,
-  //     name: event.target.value
-  //   });
-  //   console.log(event.target.value);
-  //   console.log("stired", this.state.email);
-  // }
-
-  // onChange = (event) => {
-  //   this.setState({ name: event.target.value })
-  //   console.log("on change insidfe")
-  // }
-
   constructor(props) {
     super(props);
     this.state = {
-      fields: { name: '' },
-      errors: { name: '' },
-      // data1: [footerdata.footerMenu1],
-      // data2: [footerdata.footerMenu2],
-      // data3: [footerdata.footerMenu3],
+      fields: { name: '', email: '', mobile: '' },
+      errors: { name: '', email: '', mobile: '' },
       email: '',
       name: '',
+      mobile: ''
     }
 
     this.info = {
@@ -56,21 +38,46 @@ export default class UserForm extends Component {
 
   handleValidation() {
     let fields = this.state.fields;
-    let errors = {};
+    let errors = this.state.errors;
+    const validEmailRegex =
+      RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
+    if (fields["name"] !== "") {
+      errors.name =
+        fields["name"].length < 5
+          ? 'Name must be 5 characters long!'
+          : '';
+    }
     if (fields["email"] !== "") {
-      let lastAtPos = fields["email"].lastIndexOf('@');
-      let lastDotPos = fields["email"].lastIndexOf('.');
-      if (!(lastAtPos < lastDotPos && lastAtPos > 0 && fields["email"].indexOf('@@') === -1 && lastDotPos > 2 && (fields["email"].length - lastDotPos) > 2)) {
-        errors["email"] = "Invalid email address";
-      }
+      errors.email =
+        validEmailRegex.test(fields["email"])
+          ? ''
+          : 'Email is not valid!';
+    }
+    if (fields["mobile"] !== "") {
+      errors.mobile =
+        fields["mobile"].length != 10
+          ? 'Mobile must be of 10 digits'
+          : '';
     }
     this.setState({ errors: errors });
+    console.log(errors)
   }
 
-  handleChange(field, e) {
+  handleChange(field, val) {
     let fields = this.state.fields;
-    fields[field] = e.target.value;
+    fields[field] = val;
     this.handleValidation()
+    if (this.state.errors.name == ''&&field=="name")
+      this.info.name = val;
+
+    if(this.state.errors.mobile == ''&&field=="mobile")
+      this.info.mobile = val;
+
+     if(this.state.errors.email == ''&&field=="email") {
+      this.info.email = val;
+    }
+    console.log(this.info);
+
   }
 
   handleClick() {
@@ -78,54 +85,24 @@ export default class UserForm extends Component {
       this.props.onClick();
     }
   }
-
-  onClick = (item, data) => {
-    console.log("Clicked Item: ", item);
-    console.log("Menu Data: ", data);
-  }
   regex = "[A-Za-z]{3}";
-
-  onKeyUp = (val) => {
-  }
-  onBlur = (val, name) => {
-    if (name == "name") {
-      this.info.name = val;
-    }
-    if (name == "email") {
-      this.info.email = val;
-    }
-    if (name == "mobile") {
-      this.info.mobile = val;
-    }
-    console.log(this.info);
-  }
-
-  onFocus = () => {
-  }
   onButtonClick() {
-    let totalSteps = this.newstate.totalSteps;
-    let activeStep = this.newstate.activeStep;
-    if (activeStep <= totalSteps) {
-      this.setState({
-        activeStep: activeStep + 1
-      })
-    }
-    let myObject = {}
-    sessionStorage.myObject = JSON.stringify(this.info);
-    sessionStorage.setItem(myObject, sessionStorage.myObject)
-    this.props.history.push("/confirm_appoinment");
-  }
-  handleButtonClick = (e) => {
-    console.log(e);
-  }
+    if (this.state.errors.name == '' && this.state.errors.mobile == '' && this.state.errors.email == '') {
+      let myObject = {}
+      sessionStorage.myObject = JSON.stringify(this.info);
+      sessionStorage.setItem(myObject, sessionStorage.myObject)
+      console.log(this.info)
 
+      this.props.history.push("/confirm_appoinment");
+      console.log(this.info)
+    }
+    else {
+      this.props.history.push("/book_appoinment");
+    }
+  }
 
   render() {
 
-    // let { data1, data2, data3 } = this.state
-    // let itemListFooter1 = data1[0].map(item => <li key={item.id}> <a className="foot" href="#/" onClick={() => this.handleClick()}> {item.label} </a> </li>)
-    // let itemListFooter2 = data2[0].map(item => <li key={item.id}> <a className="foot" href="#/" onClick={() => this.handleClick()}> {item.label} </a> </li>)
-    // let itemListFooter3 = data3[0].map(item => <li key={item.id}> <a className="foot" href="#/" onClick={() => this.handleClick()}> {item.label} </a> </li>)
     let itemListFooter1 = page1json.footer.footerMenu1.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
     let itemListFooter2 = page1json.footer.footerMenu2.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
     let itemListFooter3 = page1json.footer.footerMenu3.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
@@ -151,57 +128,68 @@ export default class UserForm extends Component {
           </BlocxHero>
         </div>
         <div className='blocx-grid'>
-          <div>
-            <h4 className="col-md-12 col-sm-12"> BOOK APPOINTMENT </h4>
+          <div className="col-md-1 col-sm-0">
           </div>
-        </div>
-        <div className='blocx-grid'>
-          <div className="col-md-6 col-sm-12">
-            <BlocxProgressIndicator activeStep={activeStep} totalSteps={totalSteps} />
-          </div>
-        </div>
-        <div >
-          <div className='blocx-grid'>
-            <div className="col-md-4 col-sm-12">
+          <div className="col-md-10 col-sm-12">
+            <div className='blocx-grid'>
               <div>
-                <BlocxTextInput
-                  label="Your Name"
-                  regex={this.regex}
-                  type="text"
-                  onBlur={(val) => this.onBlur(val, "name")}
-                  onFocus={this.onFocus}>
-                </BlocxTextInput>
+                <h4 className="col-md-12 col-sm-12"> BOOK APPOINTMENT </h4>
               </div>
-              <div >
-                <BlocxTextInput
-                  label="Email ID"
-                  regex={this.regex}
-                  type="text"
-                  onBlur={(val) => this.onBlur(val, "email")}
-                  onFocus={this.onFocus}>
-                </BlocxTextInput>
+            </div>
+            <div className='blocx-grid'>
+              <div className="col-md-1 col-sm-0">
               </div>
-              <div>
-                <BlocxTextInput
-                  label="Mobile Number"
-                  regex={this.regex}
-                  type="text"
-                  onBlur={(val) => this.onBlur(val, "mobile")}
-                  onFocus={this.onFocus}>
-                </BlocxTextInput>
+              <div className="col-md-10 col-sm-12">
+                <BlocxProgressIndicator activeStep={activeStep} totalSteps={totalSteps} />
               </div>
-              <Link to="/page11">
+              <div className="col-md-1 col-sm-0">
+              </div>
+            </div>
+            <div className='blocx-grid'>
+              <div className="col-md-4 col-sm-12">
                 <div>
-                  <BlocxButton.Primary label="Next" onClick={this.onButtonClick.bind(this)}>
-                  </BlocxButton.Primary>&nbsp;
-          </div>
-              </Link>
+                  <BlocxTextInput
+                    label="Your Name"
+                    regex={this.regex}
+                    type="text"
+                    onBlur={(val) => this.handleChange("name", val)}>
+                  </BlocxTextInput>
+                  <span className="col-md-12 errormessage">{this.state.errors.name}</span>
+                </div>
+                <div >
+                  <BlocxTextInput
+                    label="Email ID"
+                    regex={this.regex}
+                    type="text"
+                    onBlur={(val) => this.handleChange("email", val)}>
+                  </BlocxTextInput>
+                  <span className="col-md-12 errormessage">{this.state.errors.email}</span>
+                </div>
+                <div>
+                  <BlocxTextInput
+                    label="Mobile Number"
+                    regex={this.regex}
+                    type="text"
+                    onBlur={(val) => this.handleChange("mobile", val)}>
+                  </BlocxTextInput>
+                  <div>
+                      <span className="col-md-12 errormessage">{this.state.errors.mobile}</span>
+                  </div>
+                </div>
+
+                <Link to="/page11">
+                  <div>
+                    <BlocxButton.Primary label="Next" onClick={this.onButtonClick.bind(this)}>
+                    </BlocxButton.Primary>&nbsp;
+                </div>
+                </Link>
+              </div>
             </div>
           </div>
-
+          <div className="col-md-1 col-sm-0">
+          </div>
         </div>
         <div>
-
           <BlocxFooter>
 
             <BlocxFooterBody.Default>
