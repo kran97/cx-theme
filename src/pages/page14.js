@@ -1,13 +1,14 @@
 
 
 import React, { Component } from 'react';
-import { BlocxCard, BlocxCardText, BlocxCardImage } from "blocx-react-components";
+import { BlocxMegaMenu, BlocxCard, BlocxCardText, BlocxCardImage } from "blocx-react-components";
 import { BlocxContentBox, BlocxContentBoxType } from "blocx-react-components";
 import { BlocxNavBar } from "blocx-react-components";
 import { BlocxFooter, BlocxFooterBody } from "blocx-react-components";
 import page13json from "../json/page13.json";
 import page1json from "../json/page1.json";
 import { BlocxHero, BlocxHeroBody, BlocxHeroCarousel } from "blocx-react-components";
+import megaMenuJson from "../json/megamenu.json"
 
 
 
@@ -66,12 +67,18 @@ export default class Page14 extends Component {
 
         return (
             <React.Fragment>
-                <div>
+                {/* <div>
                     <BlocxNavBar
                         data={page13json.items}
                         onClick={(item, data) =>
                             this.onClick(item, data)}>
                     </BlocxNavBar>
+                </div> */}
+                  <div>
+                    <BlocxMegaMenu
+                        data={megaMenuJson}
+                        onClick={(item, data) => this.onMegaMenuClick(item, data)}
+                        onStateChange={(value) => this.onStateChange(value)}/>
                 </div>
                 <div>
                     <BlocxHero>

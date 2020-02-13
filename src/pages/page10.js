@@ -64,6 +64,7 @@ export default class UserForm extends Component {
   }
 
   handleChange(field, val) {
+    console.log("here");
     let fields = this.state.fields;
     fields[field] = val;
     this.handleValidation()
@@ -92,7 +93,6 @@ export default class UserForm extends Component {
       sessionStorage.myObject = JSON.stringify(this.info);
       sessionStorage.setItem(myObject, sessionStorage.myObject)
       console.log(this.info)
-
       this.props.history.push("/confirm_appoinment");
       console.log(this.info)
     }
@@ -152,7 +152,9 @@ export default class UserForm extends Component {
                     label="Your Name"
                     regex={this.regex}
                     type="text"
+                    onKeyup={(val) => this.handleChange("name", val)}
                     onBlur={(val) => this.handleChange("name", val)}>
+
                   </BlocxTextInput>
                   <span className="col-md-12 errormessage">{this.state.errors.name}</span>
                 </div>
@@ -161,6 +163,7 @@ export default class UserForm extends Component {
                     label="Email ID"
                     regex={this.regex}
                     type="text"
+                    onKeyup={(val) => this.handleChange("email", val)}
                     onBlur={(val) => this.handleChange("email", val)}>
                   </BlocxTextInput>
                   <span className="col-md-12 errormessage">{this.state.errors.email}</span>
@@ -170,6 +173,7 @@ export default class UserForm extends Component {
                     label="Mobile Number"
                     regex={this.regex}
                     type="text"
+                    onKeyup={(val) => this.handleChange("mobile", val)}
                     onBlur={(val) => this.handleChange("mobile", val)}>
                   </BlocxTextInput>
                   <div>

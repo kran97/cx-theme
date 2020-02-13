@@ -385,6 +385,7 @@ width: 352px;
 }
 .errormessage{
   color: red;
+  margin-top: -20px;
   margin-bottom: 20px;
   font-size: 12px;
 }
