@@ -1,13 +1,8 @@
 
 import React, { Component } from 'react';
-import { BlocxNavBar } from "blocx-react-fullbundle";
-import { BlocxButton } from "blocx-react-fullbundle";
-import { BlocxFooter, BlocxFooterBody } from 'blocx-react-fullbundle'
-import { BlocxDivider } from 'blocx-react-fullbundle'
-import { BlocxHero, BlocxHeroBody, BlocxHeroCarousel } from "blocx-react-fullbundle";
+import { BlocxProgressIndicator, BlocxButton, BlocxNavBar, BlocxHero, BlocxHeroBody, BlocxHeroCarousel, BlocxDivider, BlocxFooter, BlocxFooterBody } from "blocx-react-components";
 import UserForm from './page10';
 import ReactDOM from 'react-dom';
-import { BlocxProgressIndicator } from 'blocx-react-fullbundle'
 import WModal from '../pages/modalcomponent';
 import page10json from '../json/page10.json';
 import page1json from '../json/page1.json';
@@ -19,9 +14,6 @@ export default class User extends Component {
         this.state = {
             fields: { name: '' },
             errors: { name: '' },
-            // data1: [footerdata.footerMenu1],
-            // data2: [footerdata.footerMenu2],
-            // data3: [footerdata.footerMenu3],
         }
         this.newstate = {
             activeStep: 4,
@@ -92,22 +84,18 @@ export default class User extends Component {
     onFocus = () => {
 
     }
-    confirmButton(){
-         ReactDOM.render(<WModal  showModal={true} />,document.getElementById('modal'));
+    confirmButton() {
+        ReactDOM.render(<WModal showModal={true} />, document.getElementById('modal'));
     }
 
     render() {
-        // let { data1, data2, data3 } = this.state
-        // let itemListFooter1 = data1[0].map(item => <li key={item.id}> <a className="foot" href="#/" onClick={() => this.handleClick()}> {item.label} </a> </li>)
-        // let itemListFooter2 = data2[0].map(item => <li key={item.id}> <a className="foot" href="#/" onClick={() => this.handleClick()}> {item.label} </a> </li>)
-        // let itemListFooter3 = data3[0].map(item => <li key={item.id}> <a className="foot" href="#/" onClick={() => this.handleClick()}> {item.label} </a> </li>)
         let itemListFooter1 = page1json.footer.footerMenu1.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
         let itemListFooter2 = page1json.footer.footerMenu2.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
         let itemListFooter3 = page1json.footer.footerMenu3.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
         let { activeStep, totalSteps } = this.newstate
         return (
             <React.Fragment>
-               <div>
+                <div>
                     <BlocxNavBar
                         data={page10json.nav}
                         onClick={(item, data) =>
@@ -122,81 +110,93 @@ export default class User extends Component {
                     </BlocxHero>
                 </div>
                 <div className='blocx-grid'>
-                    <div>
-                        <h4 className="col-md-12 col-sm-12"> BOOK APPOINTMENT </h4>
+                    <div className="col-md-1 col-sm-0">
                     </div>
-                </div>
-                <div className='blocx-grid'>
-                    <div className="col-md-6 col-sm-12">
-                        <BlocxProgressIndicator activeStep={activeStep} totalSteps={totalSteps} />
-                    </div>
-                </div>
-                <div className='blocx-grid'>
                     <div className="col-md-10 col-sm-12">
-                        <table >
-                            <thead>
-                                <tr>
-                                    <td className="table-heading">City</td>
-                                    <td className="table-heading">Location</td>
-                                    <td className="table-heading">Speciality</td>
-                                </tr>
-                            </thead>
-                        </table>
-                        <BlocxDivider
-                            height={0.01}
-                            widthInPer={true}
-                            width={100}
-                            color="#898989"
-                            type="horizontal"
-                        ></BlocxDivider>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td className="table-content">Bangalore</td>
-                                    <td className="table-content">Apolo Bargetta,City</td>
-                                    <td className="table-content">Cardiology</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td className="table-heading">Doctor Name</td>
-                                    <td className="table-heading">Appointment Time</td>
-                                    <td className="table-heading">Your Details </td>
-                                </tr>
-                            </thead>
-                        </table>
-                        <BlocxDivider
-                            height={0.01}
-                            widthInPer={true}
-                            width={100}
-                            color="#898989"
-                            type="horizontal"
-                        ></BlocxDivider>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td className="table-content">
-                                        <tr>Atul Prakash</tr>
-                                        <tr>MBBS, MD (Gen Med)</tr>
-                                        <tr>DM (Cardiology)</tr>
-                                        <tr>Senior Cardiologist</tr>
-                                    </td>
-                                    <td className="table-content">
-                                        <tr>Monday</tr>
-                                        <tr>9:30am-10:30am</tr>
-                                    </td>
-                                    <td className="table-content">
-                                        <tr>{this.user.name}</tr>
-                                        <tr>{this.user.email}</tr>
-                                        <tr>{this.user.mobile}</tr>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <BlocxButton.Primary label="Confirm" onClick={this.confirmButton}>
-                        </BlocxButton.Primary>
+                        <div className='blocx-grid'>
+                            <div>
+                                <h4 className="col-md-12 col-sm-12"> BOOK APPOINTMENT </h4>
+                            </div>
+                        </div>
+                        <div className='blocx-grid'>
+                            <div className="col-md-1 col-sm-0">
+                            </div>
+                            <div className="col-md-10 col-sm-12">
+                                <BlocxProgressIndicator activeStep={activeStep} totalSteps={totalSteps} />
+                            </div>
+                            <div className="col-md-1 col-sm-0">
+                            </div>
+                        </div>
+                        <div className='blocx-grid'>
+                            <div className="col-md-12 col-sm-12">
+                                <table >
+                                    <thead>
+                                        <tr>
+                                            <td className="table-heading">City</td>
+                                            <td className="table-heading">Location</td>
+                                            <td className="table-heading">Speciality</td>
+                                        </tr>
+                                    </thead>
+                                </table>
+                                <BlocxDivider
+                                    height={0.01}
+                                    widthInPer={true}
+                                    width={100}
+                                    color="#898989"
+                                    type="horizontal"
+                                ></BlocxDivider>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td className="table-content">Bangalore</td>
+                                            <td className="table-content">Apolo Bargetta,City</td>
+                                            <td className="table-content">Cardiology</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td className="table-heading">Doctor Name</td>
+                                            <td className="table-heading">Appointment Time</td>
+                                            <td className="table-heading">Your Details </td>
+                                        </tr>
+                                    </thead>
+                                </table>
+                                <BlocxDivider
+                                    height={0.01}
+                                    widthInPer={true}
+                                    width={100}
+                                    color="#898989"
+                                    type="horizontal"
+                                ></BlocxDivider>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td className="table-content">
+                                                <tr>Atul Prakash</tr>
+                                                <tr>MBBS, MD (Gen Med)</tr>
+                                                <tr>DM (Cardiology)</tr>
+                                                <tr>Senior Cardiologist</tr>
+                                            </td>
+                                            <td className="table-content">
+                                                <tr>Monday</tr>
+                                                <tr>9:30am-10:30am</tr>
+                                            </td>
+                                            <td className="table-content">
+                                                <tr>{this.user.name}</tr>
+                                                <tr>{this.user.email}</tr>
+                                                <tr>{this.user.mobile}</tr>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <BlocxButton.Primary label="Confirm" onClick={this.confirmButton}>
+                                </BlocxButton.Primary>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-1 col-sm-0">
                     </div>
                 </div>
                 <div>
@@ -287,8 +287,8 @@ export default class User extends Component {
 
                 </div>
                 <div id="modal"></div>
-                
-                
+
+
             </React.Fragment>
         );
     }
