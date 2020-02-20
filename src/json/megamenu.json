@@ -1,0 +1,303 @@
+{
+
+    "logo": {
+
+        "imgUrl": "/assets/images/blocx-logo.svg",
+
+        "imgAlt": ""
+
+    },
+
+    "items": [ {
+
+        "id": "0",
+
+        "name": "ABOUT US",
+
+        "url": "#",
+
+        "leftpanel": {
+
+            "imgUrl": "/assets/images/Group 6903.png",
+
+            "imgAlt": "",
+
+            "heading": "ABOUT US",
+
+            "description": "Integer onare libero nisi. Duis ac magna urna. Nulla facilisi."
+
+        },
+
+        "level": 1,
+
+        "items": [{
+
+            "id": "1",
+
+            "name": "Corporate Press",
+
+            "url": "#",
+
+            "level": 2,
+
+            "items": [{
+
+                "id": "2",
+
+                "name": "Our Company",
+
+                "url": "#",
+
+                "level": 3
+
+            }, {
+
+                "id": "3",
+
+                "name": "Vision And Values",
+
+                "url": "#",
+
+                "level": 3
+
+            }, {
+
+                "id": "4",
+
+                "name": "History",
+
+                "url": "#",
+
+                "level": 3
+
+            }, {
+
+                "id": "5",
+
+                "name": "Diversity and Inclusion",
+
+                "url": "#",
+
+                "level": 3
+
+            }, {
+
+                "id": "6",
+
+                "name": "Ethnics and Compliance",
+
+                "url": "#",
+
+                "level": 3
+
+            },{
+
+                "id": "7",
+
+                "name": "Sustainabilty",
+
+                "url": "#",
+
+                "level": 3
+
+            },{
+
+                "id": "8",
+
+                "name": "Access to Healthcare",
+
+                "url": "#",
+
+                "level": 3
+
+            }]
+
+        }, {
+
+            "id": "9",
+
+            "name": "Press",
+
+            "url": "#",
+
+            "level": 2,
+
+            "items": [{
+
+                "id": "10",
+
+                "name": "Press Release",
+
+                "url": "#",
+
+                "level": 3
+
+            }, {
+
+                "id": "11",
+
+                "name": "Events and Initiatives",
+
+                "url": "#",
+
+                "level": 3
+
+            }, {
+
+                "id": "12",
+
+                "name": "Media Contacts",
+
+                "url": "#",
+
+                "level": 3
+
+            }, {
+
+                "id": "13",
+
+                "name": "Annual Results",
+
+                "url": "test",
+
+                "level": 3
+
+            }, {
+
+                "id": "14",
+
+                "name": "Media Conferences",
+
+                "url": "#",
+
+                "level": 3
+
+            }]
+
+        }, {
+
+            "id": "15",
+
+            "name": "Global Activities",
+
+            "url": "#",
+
+            "level": 2,
+
+            "items": [{
+
+                "id": "16",
+
+                "name": "Europe",
+
+                "url": "#",
+
+                "level": 3
+
+            }, {
+
+                "id": "17",
+
+                "name": "North America",
+
+                "url": "#",
+
+                "level": 3
+
+            }, {
+
+                "id": "18",
+
+                "name": "South America",
+
+                "url": "#",
+
+                "level": 3
+
+            }, {
+
+                "id": "19",
+
+                "name": "Asia",
+
+                "url": "#",
+
+                "level": 3
+
+            }, {
+
+                "id": "20",
+
+                "name": "Africa",
+
+                "url": "#",
+
+                "level": 3
+
+            }, {
+
+                "id": "21",
+
+                "name": "Australia",
+
+                "url": "#",
+
+                "level": 3
+
+            }]
+
+        }]
+
+    }, {
+
+        "id": "22",
+
+        "name": "PRODUCTS",
+
+        "url": "#",
+
+        "level": 1,
+
+        "items": null
+
+    },
+    {
+
+        "id": "23",
+
+        "name": "INNOVATION",
+
+        "url": "#",
+
+        "level": 1,
+
+        "items": null
+
+    }, {
+
+        "id": "24",
+
+        "name": "HUMAN PHARMA",
+
+        "url": "#",
+
+        "level": 1,
+
+        "items": null
+
+    },
+    {
+
+        "id": "25",
+
+        "name": "CAREERS",
+
+        "url": "#",
+
+        "level": 1,
+
+        "items": null
+
+    }]
+
+}
