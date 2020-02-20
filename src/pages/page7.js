@@ -81,27 +81,7 @@ export default class Page7 extends React.Component {
     }
 
     render() {
-        const onClick = (item, data) => {
-
-            console.log("Clicked Item: ", item);
-
-            console.log("Menu Data: ", data);
-
-        }
-
-        // const pStyle = {
-
-        //     color:'red'
-
-        //   };
-
-        // let { data1, data2, data3 } = this.state
-
-        // let itemListFooter1 = data1[0].map(item => <li key={item.id}> <a className="foot" href="#/" onClick={() => this.handleClick()}> {item.label} </a> </li>)
-
-        // let itemListFooter2 = data2[0].map(item => <li key={item.id}> <a className="foot" href="#/" onClick={() => this.handleClick()}> {item.label} </a> </li>)
-
-        // let itemListFooter3 = data3[0].map(item => <li key={item.id}> <a className="foot" href="#/" onClick={() => this.handleClick()}> {item.label} </a> </li>)
+        
         let itemListFooter1 = page1json.footer.footerMenu1.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
         let itemListFooter2 = page1json.footer.footerMenu2.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
         let itemListFooter3 = page1json.footer.footerMenu3.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)

@@ -34,9 +34,7 @@ export default class UserForm extends Component {
     this.state = {
       fields: { name: '' },
       errors: { name: '' },
-      // data1: [footerdata.footerMenu1],
-      // data2: [footerdata.footerMenu2],
-      // data3: [footerdata.footerMenu3],
+      
       email: '',
       name: '',
     }
@@ -88,13 +86,13 @@ export default class UserForm extends Component {
   onKeyUp = (val) => {
   }
   onBlur = (val, name) => {
-    if (name == "name") {
+    if (name === "name") {
       this.info.name = val;
     }
-    if (name == "email") {
+    if (name === "email") {
       this.info.email = val;
     }
-    if (name == "mobile") {
+    if (name === "mobile") {
       this.info.mobile = val;
     }
     console.log(this.info);
@@ -122,10 +120,6 @@ export default class UserForm extends Component {
 
   render() {
 
-    // let { data1, data2, data3 } = this.state
-    // let itemListFooter1 = data1[0].map(item => <li key={item.id}> <a className="foot" href="#/" onClick={() => this.handleClick()}> {item.label} </a> </li>)
-    // let itemListFooter2 = data2[0].map(item => <li key={item.id}> <a className="foot" href="#/" onClick={() => this.handleClick()}> {item.label} </a> </li>)
-    // let itemListFooter3 = data3[0].map(item => <li key={item.id}> <a className="foot" href="#/" onClick={() => this.handleClick()}> {item.label} </a> </li>)
     let itemListFooter1 = page1json.footer.footerMenu1.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
     let itemListFooter2 = page1json.footer.footerMenu2.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
     let itemListFooter3 = page1json.footer.footerMenu3.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
@@ -292,3 +286,5 @@ export default class UserForm extends Component {
     );
   }
 }
+
+

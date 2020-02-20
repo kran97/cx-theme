@@ -11,7 +11,7 @@ import page1json from '../json/page1.json';
     const cardInfo = [...page1json.cardDetails];
   return (
     <React.Fragment>
-      <BlocxNavBar className="navbar1" label={false} data={page1json.navbar} />
+      <BlocxNavBar className="navbar1" label="" data={page1json.navbar} />
       <BlocxHero>
         <BlocxHeroBody>
           <BlocxHeroCarousel className="heroBody" data={page1json.hero}></BlocxHeroCarousel>
@@ -60,7 +60,7 @@ import page1json from '../json/page1.json';
             <h2>” I was stuck at the same weight for a year…<br></br>
               Until I started XLS Medical”</h2>
             <p>Scarlet - 21lbs*</p>
-            <div className="blocx-grid" className="midBody-button">
+            <div className="blocx-grid midBody-button">
               <div className="col-md-3"><BlocxButton.Primary label="MY STORY" className="btn2"></BlocxButton.Primary></div>
               <div className="col-md-5"><BlocxButton.Primary label="ALL OUR SUCCESS STORIES" className="btn2" onClick={()=>this.props.history.push("/success_stories")}></BlocxButton.Primary></div>
             </div>

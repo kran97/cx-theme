@@ -6,7 +6,6 @@ import carouseljson from "../json/carousel8.json";
 import navData from "../json/navData81.json";
 // import navData1 from "../json/navData82.json";
 import logo from "../logo.svg"; //Not the required one
-import { BlocxCard, BlocxCardText, BlocxCardBody, BlocxCardImage, BlocxCardHeader } from 'blocx-react-fullbundle';
 import { BlocxFooter, BlocxFooterBody } from 'blocx-react-fullbundle'
 import { BlocxProgressIndicator } from 'blocx-react-fullbundle'
 import { BlocxDropdown } from "blocx-react-fullbundle";
@@ -14,7 +13,6 @@ import { BlocxButton } from "blocx-react-fullbundle";
 import { BlocxContentBox, BlocxContentBoxType } from "blocx-react-fullbundle";
 import { BlocxDatePicker } from "blocx-react-fullbundle";
 import { BlocxChips } from "blocx-react-fullbundle";
-// import morning from "../app/assets/images/morning.png"
 import page1json from '../json/page1.json';
 
 export default class Page9 extends React.Component {
@@ -28,14 +26,6 @@ export default class Page9 extends React.Component {
             fields: { name: '' },
 
             errors: { name: '' },
-
-            // data1: [footerJson.footerMenu1],
-
-            // data2: [footerJson.footerMenu2],
-
-            // data3: [footerJson.footerMenu3]
-
-
 
         }
 
@@ -65,7 +55,6 @@ export default class Page9 extends React.Component {
 
             if (!(lastAtPos < lastDotPos && lastAtPos > 0 && fields["email"].indexOf('@@') === -1 && lastDotPos > 2 && (fields["email"].length - lastDotPos) > 2)) {
 
-                // formIsValid = false;
 
                 errors["email"] = "Invalid email address";
 
@@ -83,13 +72,10 @@ export default class Page9 extends React.Component {
 
         fields[field] = e.target.value;
 
-        // this.setState({fields});
 
         this.handleValidation()
 
     }
-
-
 
     handleClick() {
 
@@ -113,19 +99,6 @@ export default class Page9 extends React.Component {
 
     }
 
-    onButtonClick() {
-        let totalSteps = this.newstate.totalSteps;
-        let activeStep = this.newstate.activeStep;
-        if (activeStep <= totalSteps) {
-            this.setState({
-                activeStep: activeStep + 1
-            })
-        }
-        //
-        this.props.history.push("/book_appoinment");
-
-    }
-
 
     render() {
         const onClick = (item, data) => {
@@ -143,7 +116,6 @@ export default class Page9 extends React.Component {
         const action = (item, data) => {
             console.log("clickedItem: ", item);
             console.log("All items: ", data);
-            // item.isSelected ? alert("Item is removed from: " + item.value) : alert("Item is added to: " + item.value);
             for (var i = 0; i < data.length; i++) {
                 if (data[i].id === item.id) {
                     data[i].isSelected = !data[i].isSelected;
@@ -359,7 +331,7 @@ export default class Page9 extends React.Component {
                     <div className="row-md-3">
                         <div className="bgwhite col-md-12" style={{ width: '1000px' }}>
                             <div className="col-md-1">
-                                <img className="image-male" src='/assets/images/male.png' alt="Card image caption" />
+                                <img className="image-male" src='/assets/images/male.png' alt="Card caption" />
 
                             </div>
 
@@ -426,7 +398,7 @@ export default class Page9 extends React.Component {
                     <div className="row-md-3">
                         <div className="bgwhite col-md-12" style={{ width: '1000px' }}>
                             <div className="col-md-1">
-                                <img className="image-male" src='/assets/images/female.png' alt="Card image caption" />
+                                <img className="image-male" src='/assets/images/female.png' alt="Card caption" />
 
                             </div>
 
@@ -491,7 +463,7 @@ export default class Page9 extends React.Component {
                     <div className="row-md-3">
                         <div className="bgwhite col-md-12" style={{ width: '1000px' }}>
                             <div className="col-md-1">
-                                <img className="image-male" src='/assets/images/male.png' alt="Card image caption" />
+                                <img className="image-male" src='/assets/images/male.png' alt="Card caption" />
 
                             </div>
 
@@ -557,7 +529,7 @@ export default class Page9 extends React.Component {
                     <div className="row-md-3">
                         <div className="bgwhite col-md-12" style={{ width: '1000px' }}>
                             <div className="col-md-1">
-                                <img className="image-male" src='/assets/images/female.png' alt="Card image caption" />
+                                <img className="image-male" src='/assets/images/female.png' alt="Card caption" />
 
                             </div>
 

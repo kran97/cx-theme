@@ -44,7 +44,7 @@ const Page4 = props => {
   });
   return (
     <React.Fragment>
-      <BlocxNavBar className="navbar1" label={false} data={page1json.navbar} />
+      <BlocxNavBar className="navbar1" label="" data={page1json.navbar} />
 
       <BlocxCard.Variant9 className="cardBody-page4">
         <BlocxCardBody.Default>

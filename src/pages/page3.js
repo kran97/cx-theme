@@ -76,11 +76,11 @@ export default class Page3 extends React.Component {
 
     return (
       <React.Fragment>
-        <BlocxNavBar className="navbar1" label={false} data={page1json.navbar} />
+        <BlocxNavBar className="navbar1" label=" " data={page1json.navbar} />
         <div className="mainBody-pg3">
           <h2>Our Products</h2>
-          <div className="blocx-input-group" className="blocx-grid">
-            <div className="category" className="col-md-3">
+          <div className="blocx-input-group blocx-grid">
+            <div className="category col-md-3">
               <h4>Category</h4>
               <BlocxDropdown
                 placeholder="Select"
@@ -88,7 +88,7 @@ export default class Page3 extends React.Component {
                 onChange={(values) => this.productCategory(values)}
               />
             </div>
-            <div className="category" className="col-md-3">
+            <div className="category col-md-3">
               <h4>Products</h4>
               <BlocxDropdown
                 placeholder="Select"
@@ -112,7 +112,7 @@ export default class Page3 extends React.Component {
 
                       <BlocxCardBody.Left>
                         <div className="cardLeft">
-                          <BlocxCardImage.Default src={item.image} alt="Card image caption"></BlocxCardImage.Default>
+                          <BlocxCardImage.Default src={item.image} alt="Card caption"></BlocxCardImage.Default>
                         </div>
                         <div className="cardLeft-text">
                           <BlocxCardText.Text>{item.text}</BlocxCardText.Text>

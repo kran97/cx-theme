@@ -6,7 +6,6 @@ import carouseljson from "../json/page8.json";
 
 // import navData1 from "../json/navData82.json";
 import logo from "../logo.svg"; //Not the required one
-import { BlocxCard, BlocxCardText, BlocxCardBody, BlocxCardImage } from 'blocx-react-fullbundle';
 import { BlocxFooter , BlocxFooterBody } from 'blocx-react-fullbundle'
 import { BlocxProgressIndicator } from 'blocx-react-fullbundle'
 import { BlocxDropdown } from "blocx-react-fullbundle";
