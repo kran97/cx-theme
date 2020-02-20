@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/page8.css';
+import '../styles/page9.css';
 import { BlocxHero, BlocxHeroBody, BlocxHeroCarousel } from "blocx-react-fullbundle";
 import { BlocxNavBar } from "blocx-react-fullbundle";
 import carouseljson from "../json/carousel8.json";
@@ -109,7 +109,7 @@ export default class Page9 extends React.Component {
                 activeStep: activeStep + 1
             })
         }
-        this.props.history.push("/page10");
+        this.props.history.push("/book_appoinment");
 
     }
 
@@ -384,6 +384,8 @@ export default class Page9 extends React.Component {
                                 </div>
 
                             </div>
+
+                            <div cl></div>
 
                             <div className="col-md-7" style={{ paddingTop: '0px' }}>
                                 <div className="row-md-8">

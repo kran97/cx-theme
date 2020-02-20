@@ -1,10 +1,6 @@
-import React,{Component} from 'react';
-import { Link } from 'react-router-dom';
-import { BlocxButton, BlocxNavBar, BlocxDivider, BlocxHero, BlocxHeroBody, BlocxHeroCarousel, BlocxContentBoxType, BlocxCard, BlocxCardText, BlocxCardBody, BlocxCardImage, BlocxCardHeader, BlocxFooter, BlocxFooterBody, BlocxContentContainer, BlocxContentBox } from 'blocx-react-fullbundle';
-// import navbarData from '../json/navbar.json';
-// import heroData from '../json/page1_hero.json';
-// import footerData from '../json/footer.json';
-// import cardData from '../json/cards_page1.json';
+import React from 'react';
+import { BlocxButton, BlocxNavBar, BlocxDivider, BlocxHero, BlocxHeroBody, BlocxHeroCarousel, BlocxContentBoxType, BlocxCard, BlocxCardText, BlocxCardBody, BlocxCardImage, BlocxCardHeader, BlocxFooter, BlocxFooterBody, BlocxContentBox } from 'blocx-react-fullbundle';
+
 import page1json from '../json/page1.json';
 
   export default class Page1 extends React.Component{
@@ -15,7 +11,6 @@ import page1json from '../json/page1.json';
     const cardInfo = [...page1json.cardDetails];
   return (
     <React.Fragment>
-      {/* <BlocxNavBar className="navbar" label={false} data={data} /> */}
       <BlocxNavBar className="navbar1" label={false} data={page1json.navbar} />
       <BlocxHero>
         <BlocxHeroBody>
@@ -28,21 +23,7 @@ import page1json from '../json/page1.json';
         {
           cardInfo.map((item)=>{
             return(
-        //       <BlocxCard.Variant5 className="cardView" className="col-md-3" >
-        //   <BlocxCardBody.Default>
-        //     <BlocxCardImage.Default src={item.image} alt="Card image caption"></BlocxCardImage.Default>
-
-            // <BlocxCardHeader.Default>
-            // <span className="itemHeader">{item.title}</span>
-            // </BlocxCardHeader.Default>
-
-        //   <BlocxCardText.Text className="itemDesc">{item.text}</BlocxCardText.Text>
-        //     <div className="blocx-card_links">
-        //       <BlocxButton.Primary label="Buy Now" className="cardButton" ></BlocxButton.Primary>
-        //     </div>
-        //   </BlocxCardBody.Default>
-        // </BlocxCard.Variant5>
-
+        
         <BlocxCard.Variant5 className="col-md-3">
           <BlocxCardBody.Default>
                <BlocxCardImage.Default src={item.image} alt="a"></BlocxCardImage.Default>
@@ -71,7 +52,7 @@ import page1json from '../json/page1.json';
           />
 
       <div className="blocx-grid">
-        <div className="col-md-4"><img src="./page1_1.png"></img></div>
+        <div className="col-md-4"><img src="./page1_1.png" alt="pic"></img></div>
         <div className="col-md-8">
         <div className="midBody-container">
           <div className="midBody-content">
@@ -89,7 +70,7 @@ import page1json from '../json/page1.json';
       </div>
 
       <div className="diet-tips blocx-grid">
-        <div className="col-md-4 diet-tips-image"><img src="./page1_2.png"></img></div>
+        <div className="col-md-4 diet-tips-image"><img src="./page1_2.png" alt="cardImage"></img></div>
         <div className="col-md-8">
         <BlocxContentBox>
             <BlocxContentBoxType.H6>Diet tips & advice</BlocxContentBoxType.H6>
@@ -109,9 +90,9 @@ import page1json from '../json/page1.json';
           />
         </div>
         <div className="divider-links col-md-6">
-          <a href="https://www.boots.com/"><img src="../../boots.png"></img></a>
-          <a href="https://www.superdrug.com/"><img src="../../img2.png"></img></a>
-          <a href="https://www.amazon.in/"><img src="../../amazon.png"></img></a>
+          <a href="https://www.boots.com/"><img src="../../boots.png" alt="link"></img></a>
+          <a href="https://www.superdrug.com/"><img src="../../img2.png" alt="link"></img></a>
+          <a href="https://www.amazon.in/"><img src="../../amazon.png" alt="link"></img></a>
         </div>
       </div>
 

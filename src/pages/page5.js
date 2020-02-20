@@ -26,17 +26,17 @@ export default class Page5 extends Component {
     }
 
  
-    onButtonClick() {
-        let totalSteps = this.newstate.totalSteps;
-        let activeStep = this.newstate.activeStep;
-        if (activeStep <= totalSteps) {
-            this.setState({
-                activeStep: activeStep + 1
-            })
-        }
-        this.props.history.push("/page11");
+    // onButtonClick() {
+    //     let totalSteps = this.newstate.totalSteps;
+    //     let activeStep = this.newstate.activeStep;
+    //     if (activeStep <= totalSteps) {
+    //         this.setState({
+    //             activeStep: activeStep + 1
+    //         })
+    //     }
+    //     this.props.history.push("/page11");
         
-      }
+    //   }
 
     handleClick = (e) => {
 
@@ -139,7 +139,7 @@ export default class Page5 extends Component {
                                         </div>
                                         
                                         <div className="col-md-3">
-                                            <BlocxButton.Primary label="Buy Now" className="page5btn" onClick={this.onButtonClick.bind(this)}>
+                                            <BlocxButton.Primary label="Buy Now" className="page5btn" >
                                             </BlocxButton.Primary>&nbsp;
                                         </div>
                                     </div>
@@ -156,7 +156,8 @@ export default class Page5 extends Component {
                                         </div>
                                         
                                         <div className="col-md-3">
-                                            <BlocxButton.Primary label="Buy Now" className="page5btn" onClick={this.onButtonClick.bind(this)}>
+                                            <BlocxButton.Primary label="Buy Now" className="page5btn">
+                                            {/* onClick={this.onButtonClick.bind(this)} */}
                                             </BlocxButton.Primary>&nbsp;
                                         </div>
                                     </div>
