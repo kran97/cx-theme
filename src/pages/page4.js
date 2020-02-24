@@ -1,26 +1,20 @@
 
 import React, { useState } from 'react';
-import { Redirect } from 'react-router-dom';
-import { BlocxButton, BlocxNavBar, BlocxTab, BlocxTable, BlocxTabContent, BlocxTabContentItem, BlocxTabLabel, BlocxTabNav, BlocxCard, BlocxCardText, BlocxCardBody, BlocxCardImage, BlocxCardHeader, BlocxFooter, BlocxFooterBody, BlocxContentContainer, BlocxContentBox } from 'blocx-react-fullbundle';
-// import navbarData from '../json/navbar.json';
-// import tabData from '../json/tab.json';
-// import tablejson from '../json/table.json';
-// import footerData from '../json/footer.json';
+import { BlocxButton, BlocxNavBar, BlocxTab, BlocxTable, BlocxTabContent, BlocxTabContentItem, BlocxTabLabel, BlocxTabNav, BlocxCard, BlocxCardText, BlocxCardBody, BlocxCardImage, BlocxCardHeader, BlocxFooter, BlocxFooterBody } from 'blocx-react-fullbundle';
+
 import page4json from '../json/page4.json';
 import page1json from '../json/page1.json';
 
 const Page4 = props => {
   const [items, setItems] = useState(page4json.tab);
-  const [test, setTest] = useState(0);
   function handleClick(e, id) {
     items.forEach(item => item.isActive = false);
     items[id].isActive = !items[id].isActive;
     setItems(items);
-    if(id!=0)
+    if(id!==0)
       setShowComponent(true);
     else
       setShowComponent(false)
-    setTest(Math.random());
   }
   
   const [showComponent,setShowComponent]=useState(false);
@@ -50,7 +44,7 @@ const Page4 = props => {
   });
   return (
     <React.Fragment>
-      <BlocxNavBar className="navbar1" label={false} data={page1json.navbar} />
+      <BlocxNavBar className="navbar1" label="" data={page1json.navbar} />
 
       <BlocxCard.Variant9 className="cardBody-page4">
         <BlocxCardBody.Default>
@@ -79,7 +73,7 @@ const Page4 = props => {
         <div className="tab col-md-6">
           <BlocxTab className="tab-name">
             <BlocxTabNav> {tabLabel}</BlocxTabNav>
-            {(showComponent==true) ?  <BlocxTabContent>{contentItems}</BlocxTabContent> : ''}
+            {(showComponent===true) ?  <BlocxTabContent>{contentItems}</BlocxTabContent> : ''}
              {/* <BlocxTabContent> {contentItems}</BlocxTabContent>    */}
           </BlocxTab>
         </div>
