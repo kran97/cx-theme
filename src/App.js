@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import logo from './logo.svg';
 import './App.css';
 import Page1 from './pages/page1';
 import Page3 from './pages/page3';
@@ -8,13 +9,19 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import User from './pages/page11';
 import Page13 from './pages/page13';
 import Page14 from './pages/page14';
+// import ComponentTesting from './pages/componenttesting';
 import WModal from './pages/modalcomponent';
 import Page6  from './pages/page6';
 import Page7 from './pages/page7';
 import Page8 from './pages/page8';
 import Page5 from './pages/page5';
 import Page9 from './pages/page9';
-
+// import Test from './pages/testing';
+// function App() {
+//   return(
+//     <Page1/>
+//   )
+// }
 class App extends Component{
   render(){
     return(

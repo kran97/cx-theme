@@ -1,19 +1,10 @@
 {
-    "typeDropdown":[
-    {"value":"Select"},
-    {"value":"Product 1"},
-    {"value":"Product 2"},
-    {"value":"Product 3"},
-    {"value":"Product 4"}
+    "dropdown":[
+    {"value":"React"},
+    {"value":"React"},
+    {"value":"React"},
+    {"value":"React"}
     ],
-
-    "categoryDropdown":[
-        {"value":"Select"},
-        {"value":"Category 1"},
-        {"value":"Category 2"},
-        {"value":"Category 3"},
-        {"value":"Category 4"}
-        ],
 
     "pagination":[
         {
@@ -69,105 +60,25 @@
                 "id": "0",
                 "title": "Medical Pharma",
                 "text": "Examiness and Cures",
-                "image": "../../card1.png",
-                "product_type":"Product 1",
-                "category":"Category 1"
+                "image": "../../card1.png"
             },
             {
                 "id": "1",
                 "title": "Title 2",
                 "text": "Lorem Ipsum is simply dummy text",
-                "image": "../../card2.png",
-                "product_type":"Product 1",
-                "category":"Category 2"
+                "image": "../../card2.png"
             },
             {
                 "id": "2",
                 "title": "Title 3",
                 "text": "Lorem Ipsum is simply dummy text",
-                "image": "../../card3.png",
-                "product_type":"Product 1",
-                "category":"Category 3"
+                "image": "../../card3.png"
             },
             {
                 "id": "3",
                 "title": "Title 3",
                 "text": "Lorem Ipsum is simply dummy text",
-                "image": "../../card4.png",
-                "product_type":"Product 1",
-                "category":"Category 4"
-            },
-            {
-                "id": "0",
-                "title": "Medical Pharma",
-                "text": "Examiness and Cures",
-                "image": "../../card1.png",
-                "product_type":"Product 2",
-                "category":"Category 1"
-            },
-            {
-                "id": "0",
-                "title": "Medical Pharma",
-                "text": "Examiness and Cures",
-                "image": "../../card1.png",
-                "product_type":"Product 3",
-                "category":"Category 1"
-            },
-            {
-                "id": "1",
-                "title": "Title 2",
-                "text": "Lorem Ipsum is simply dummy text",
-                "image": "../../card2.png",
-                "product_type":"Product 2",
-                "category":"Category 2"
-            },
-            {
-                "id": "1",
-                "title": "Title 2",
-                "text": "Lorem Ipsum is simply dummy text",
-                "image": "../../card2.png",
-                "product_type":"Product 3",
-                "category":"Category 2"
-            },
-            {
-                "id": "2",
-                "title": "Title 3",
-                "text": "Lorem Ipsum is simply dummy text",
-                "image": "../../card3.png",
-                "product_type":"Product 2",
-                "category":"Category 3"
-            },
-            {
-                "id": "2",
-                "title": "Title 3",
-                "text": "Lorem Ipsum is simply dummy text",
-                "image": "../../card3.png",
-                "product_type":"Product 3",
-                "category":"Category 3"
-            },
-            {
-                "id": "3",
-                "title": "Title 3",
-                "text": "Lorem Ipsum is simply dummy text",
-                "image": "../../card4.png",
-                "product_type":"Product 2",
-                "category":"Category 4"
-            },
-            {
-                "id": "3",
-                "title": "Title 3",
-                "text": "Lorem Ipsum is simply dummy text",
-                "image": "../../card4.png",
-                "product_type":"Product 3",
-                "category":"Category 4"
-            },
-            {
-                "id": "3",
-                "title": "Title 3",
-                "text": "Lorem Ipsum is simply dummy text",
-                "image": "../../card4.png",
-                "product_type":"Product 4",
-                "category":"Category 4"
+                "image": "../../card4.png"
             }
         ]
     }

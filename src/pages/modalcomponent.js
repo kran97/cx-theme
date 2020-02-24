@@ -49,7 +49,7 @@ class WModal extends Component {
                 <BlocxModal.Default style={{ display: display }} >
                     <div className="blocx-grid">
                         <div className="col-md-2 modalimage">
-                            <img src={require('../app/assets/images/status-ok-circ-ko.svg')}  alt="img"/>
+                            <img src={require('../app/assets/images/status-ok-circ-ko.svg')} />
                         </div>
                         <div className="col-md-8">
                             <BlocxModalHeader.Default >
