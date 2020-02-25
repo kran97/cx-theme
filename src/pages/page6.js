@@ -18,79 +18,42 @@ class Page6 extends React.Component {
         }
     }
     handleValidation() {
-
         let fields = this.state.fields;
-
         let errors = {};
-
         if (fields["email"] !== "") {
-
             let lastAtPos = fields["email"].lastIndexOf('@');
-
             let lastDotPos = fields["email"].lastIndexOf('.');
-
-
-
             if (!(lastAtPos < lastDotPos && lastAtPos > 0 && fields["email"].indexOf('@@') === -1 && lastDotPos > 2 && (fields["email"].length - lastDotPos) > 2)) {
-
                 // formIsValid = false;
-
                 errors["email"] = "Invalid email address";
-
             }
-
         }
-
         this.setState({ errors: errors });
-
     }
-
     handleChange(field, e) {
-
         let fields = this.state.fields;
-
         fields[field] = e.target.value;
-
         // this.setState({fields});
-
         this.handleValidation()
-
     }
-
-
-
     handleClick() {
-
         if (this.props.onClick) {
-
             this.props.onClick();
-
         }
-
     }
-
     render() {
-        
         let itemListFooter1 = page1json.footer.footerMenu1.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
         let itemListFooter2 = page1json.footer.footerMenu2.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
         let itemListFooter3 = page1json.footer.footerMenu3.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
         return (
-
             <React.Fragment>
-            
-                      <BlocxNavBar className="navbar1" label="" data={page1json.navbar} />
-
+                <BlocxNavBar className="navbar1" label="" data={page1json.navbar} />
                 <div>
                     <BlocxHero>
-
                         <BlocxHeroBody>
-
                             <BlocxHeroCarousel data={carouseljson.items}></BlocxHeroCarousel>
-
                         </BlocxHeroBody>
-
                     </BlocxHero>
-
                 </div>
                 <div className="pads">
                     <h2><b>Success Stories</b></h2>
@@ -115,8 +78,8 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
                                 <br></br>
 
                                 <div className="blocx-card_links">
-                                    <Link to="/my_story" className="linkTo">
-                                    <a className="share-link" href="http://localhost:3000/my_story">Read More</a>
+                                    <Link to="/my_story" className="linkTo share-link">Read More
+                                    {/* <a className="share-link" href="http://localhost:3000/my_story">Read More</a> */}
                                     </Link>
                                 </div>
 
@@ -143,8 +106,8 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
 
                                 <div className="blocx-card_links">
 
-                                <Link to="/my_story" className="linkTo">
-                                    <a className="share-link" href="/#">Read More</a>
+                                    <Link to="/my_story" className="linkTo share-link">Read More
+                                        {/* <a className="share-link" href="/#">Read More</a> */}
                                     </Link>
 
                                 </div>
@@ -172,8 +135,8 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
 
                                 <div className="blocx-card_links">
 
-                                <Link to="/my_story" className="linkTo">
-                                    <a className="share-link" href="/#">Read More</a>
+                                    <Link to="/my_story" className="linkTo share-link">Read More
+                                        {/* <a className="share-link" href="/#">Read More</a> */}
                                     </Link>
 
                                 </div>
@@ -201,8 +164,8 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
 
                                 <div className="blocx-card_links">
 
-                                <Link to="/my_story" className="linkTo">
-                                    <a className="share-link" href="/#">Read More</a>
+                                    <Link to="/my_story" className="linkTo share-link">Read More
+                                        {/* <a className="share-link" href="/#">Read More</a> */}
                                     </Link>
 
                                 </div>
@@ -230,8 +193,8 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
 
                                 <div className="blocx-card_links">
 
-                                <Link to="/my_story" className="linkTo">
-                                    <a className="share-link" href="/#">Read More</a>
+                                    <Link to="/my_story" className="linkTo share-link">Read More
+                                        {/* <a className="share-link" href="/#">Read More</a> */}
                                     </Link>
 
                                 </div>
@@ -259,8 +222,8 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
 
                                 <div className="blocx-card_links">
 
-                                <Link to="/my_story" className="linkTo">
-                                    <a className="share-link" href="/#">Read More</a>
+                                    <Link to="/my_story" className="linkTo share-link">Read More
+                                        {/* <a className="share-link" href="/#">Read More</a> */}
                                     </Link>
 
                                 </div>
@@ -288,8 +251,8 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
 
                                 <div className="blocx-card_links">
 
-                                <Link to="/my_story" className="linkTo">
-                                    <a className="share-link" href="/#">Read More</a>
+                                    <Link to="/my_story" className="linkTo share-link">Read More
+                                        {/* <a className="share-link" href="/#">Read More</a> */}
                                     </Link>
 
                                 </div>
@@ -317,8 +280,8 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
 
                                 <div className="blocx-card_links">
 
-                                <Link to="/my_story" className="linkTo">
-                                    <a className="share-link" href="http://localhost:3000/my_story">Read More</a>
+                                    <Link to="/my_story" className="linkTo share-link">Read More
+                                        {/* <a className="share-link" href="http://localhost:3000/my_story">Read More</a> */}
                                     </Link>
 
                                 </div>

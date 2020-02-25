@@ -5,12 +5,12 @@
     max-height: 378px;
 }
 .blocx-slider_block .blocx-slider_block_content {
-    left: 35%;
+    left: 15%;
     width: 150px;
     font-size: 18px;
     line-height: 52px;
     color: #2699FB;
-    /* text-align: left; */
+    text-align: left;
 }
 .pads {
     padding-left: 25px;

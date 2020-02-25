@@ -1,8 +1,9 @@
 
 import React, { useState } from 'react';
-import { BlocxButton, BlocxNavBar, BlocxTab, BlocxTable, BlocxTabContent, BlocxTabContentItem, BlocxTabLabel, BlocxTabNav, BlocxCard, BlocxCardText, BlocxCardBody, BlocxCardImage, BlocxCardHeader, BlocxFooter, BlocxFooterBody } from 'blocx-react-components';
+import { BlocxButton, BlocxNavBar, BlocxTab, BlocxTableWrapper, BlocxTable, BlocxTableHeading, BlocxTableBody, BlocxTabContent, BlocxTabContentItem, BlocxTabLabel, BlocxTabNav, BlocxCard, BlocxCardText, BlocxCardBody, BlocxCardImage, BlocxCardHeader, BlocxFooter, BlocxFooterBody, BlocxContentBox, BlocxContentBoxType } from 'blocx-react-components';
 import page4json from '../json/page4.json';
 import page1json from '../json/page1.json';
+import tabledata from '../json/tabledata.json';
 
 const Page4 = props => {
   const [items, setItems] = useState(page4json.tab);
@@ -10,25 +11,74 @@ const Page4 = props => {
     items.forEach(item => item.isActive = false);
     items[id].isActive = !items[id].isActive;
     setItems(items);
-    if(id!==0)
+    if (id !== 0)
       setShowComponent(true);
     else
       setShowComponent(false)
   }
-  
-  const [showComponent,setShowComponent]=useState(false);
-  
+
+  const [showComponent, setShowComponent] = useState(false);
+
+  // const { data, showcheckbox } = props;
+  const data = tabledata;
+  const tableHeader = data.header;
+  const tableHeaderKeys = Object.keys(tableHeader);
+  const tableContent = data.items;
+
   let contentItems = items.map((item) => {
-    return (    
-           <BlocxTabContentItem key={item.id} active={item.isActive}> 
-            <h1>{item.contentTitle}</h1>
-            {/* {item.itemImage?<img src={item.itemImage} alt="Tabs"/>:''} */}
-            <br></br>
-            {item.description ? item.description :''}
-           </BlocxTabContentItem> 
+    return (
+      <BlocxTabContentItem key={item.id} active={item.isActive}>
+        {item.id === '0' ?
+          <div className="blocx-grid">
+            <div className="col-md-6 medicine-info">
+              <h4>XLS-Nutrition</h4>
+              <BlocxContentBox>
+                <BlocxContentBoxType.Cite>
+                  {page4json.content}
+                </BlocxContentBoxType.Cite>
+              </BlocxContentBox>
+            </div>
+            <div className="col-md-6 col-sm-12">
+              <BlocxTableWrapper>
+                <BlocxTable id="table1">
+                  <BlocxTableHeading>
+                    <tr>
+                      {tableHeaderKeys.map((item) => {
+                        return (
+                          <td key={item}>{tableHeader[item]}</td>
+                        )
+                      })}
+                    </tr>
+                  </BlocxTableHeading>
+                  <BlocxTableBody>
+                    {tableContent.map((item) => {
+                      return (
+                        <tr key={item.id}>
+                          <td>
+                            <div className="user-card">
+                              <div className="user-card_details">
+                                <h4>{item.name}</h4>
+                                {<label htmlFor="email">{item.email}</label>}
+                              </div>
+                            </div>
+                          </td>
+                          <td>{item.company}</td>
+                          <td>{item.phone}</td>
+                          <td><span className="stricker">{item.tags}</span></td>
+                        </tr>
+                      )
+                    })}
+                  </BlocxTableBody>
+                </BlocxTable>
+              </BlocxTableWrapper>
+            </div>
+          </div> :
+          <p>{item.description}</p>}
+
+      </BlocxTabContentItem>
     );
 
-});
+  });
 
   let itemListFooter1 = page1json.footer.footerMenu1.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
   let itemListFooter2 = page1json.footer.footerMenu2.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
@@ -44,54 +94,44 @@ const Page4 = props => {
   return (
     <React.Fragment>
       <BlocxNavBar className="navbar1" label="" data={page1json.navbar} />
+      <div className="blocx-grid">
+        <div className="col-md-12">
+          <BlocxCard.Variant9 className="cardBody-page4">
+            <BlocxCardBody.Default>
+              <BlocxCardBody.Left>
+                <div className="page4-card">
+                  <BlocxCardImage.Default src='../../card3.png' alt="Card image caption"></BlocxCardImage.Default>
+                </div>
 
-      <BlocxCard.Variant9 className="cardBody-page4">
-        <BlocxCardBody.Default>
-          <BlocxCardBody.Left>
-            <div className="page4-card">
-              <BlocxCardImage.Default src='../../card3.png' alt="Card image caption"></BlocxCardImage.Default>
-            </div>
+              </BlocxCardBody.Left>
 
-          </BlocxCardBody.Left>
+              <BlocxCardBody.Right>
+                <BlocxCardHeader.Default>
+                  <span className="itemHeader">XLS-Nutrition Vanilla</span>
+                </BlocxCardHeader.Default>
+                <div className="page4-cardLeft-text">
+                  <BlocxCardText.Text>Greyhound divisively hello coldly wonderfully  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</BlocxCardText.Text>
+                </div>
 
-          <BlocxCardBody.Right>
-            <BlocxCardHeader.Default>
-              <span className="itemHeader">XLS-Nutrition Vanilla</span>
-            </BlocxCardHeader.Default>
-            <div className="page4-cardLeft-text">
-              <BlocxCardText.Text>Greyhound divisively hello coldly wonderfully</BlocxCardText.Text>
-            </div>
+                <BlocxButton.Primary label="BUY NOW" className="page4-button" onClick={() => props.history.push("/page5")}></BlocxButton.Primary>
 
-            <BlocxButton.Primary label="BUY NOW" className="page4-button" onClick={() => props.history.push("/page5")}></BlocxButton.Primary>
-            
-          </BlocxCardBody.Right>
-        </BlocxCardBody.Default>
-      </BlocxCard.Variant9>
-
+              </BlocxCardBody.Right>
+            </BlocxCardBody.Default>
+          </BlocxCard.Variant9>
+        </div>
+      </div>
       <div className="blocx-grid tab-container">
-        <div className="tab col-md-6">
+        {/* <div className="col-md-3"></div> */}
+        <div className="tab col-md-12">
           <BlocxTab className="tab-name">
             <BlocxTabNav> {tabLabel}</BlocxTabNav>
-            {(showComponent===true) ?  <BlocxTabContent>{contentItems}</BlocxTabContent> : ''}
-             {/* <BlocxTabContent> {contentItems}</BlocxTabContent>    */}
+            <BlocxTabContent>
+              {contentItems}
+            </BlocxTabContent>
           </BlocxTab>
         </div>
       </div>
-    {showComponent ? '':
-      <div className="blocx-grid">
-        <div className="col-md-6 medicine-info">
-          <h4>XLS-Nutrition</h4>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.
-                    </div>
-        <div className="col-md-6 col-sm-12">
-          <BlocxTable data={page4json.table}
-            showcheckbox={false}
-            className={''}
-          />
-        </div>
-      </div>
-     }
       <BlocxFooter className="footerBody">
         <BlocxFooterBody.Default>
           <BlocxFooterBody.Grid>

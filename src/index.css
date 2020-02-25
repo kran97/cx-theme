@@ -186,9 +186,9 @@ color: white;
   width:30%;
   float: left;
 }
-.blocx-card_img{
+/* .blocx-card_img{
   height:130px;
-}
+} */
 .cardLeft-text{
   width: 65%;
   float: right;
@@ -245,9 +245,9 @@ color: white;
   border-color:  #2699FB;
   padding: 0 35px;
 }
-.tab-container{
+/* .tab-container{
   align: center;
-}
+} */
 .pagination{
   text-align: center;
   margin-bottom: 50px;

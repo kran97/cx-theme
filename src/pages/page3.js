@@ -72,7 +72,7 @@ class Page3 extends React.Component {
 
     return (
       <React.Fragment>
-        <BlocxNavBar className="navbar1" label=" " data={page1json.navbar} />
+        <BlocxNavBar className="navbar1" data={page1json.navbar} />
         <div className="mainBody-pg3">
           <h2>Our Products</h2>
           <div className="blocx-input-group blocx-grid">
@@ -101,7 +101,7 @@ class Page3 extends React.Component {
 
             showCards.map((item) => {
               return (
-                <div className="blocx-grid">
+                <div key={item.id} className="blocx-grid">
                   <BlocxCard.Variant9 className="cardBody-page3" key={item.id}>
 
                     <BlocxCardBody.Default>

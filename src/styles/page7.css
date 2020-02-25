@@ -73,6 +73,12 @@
     height: 67px;
     /* border-radius: 100%; */
 }
+.blocx-content-container .abc {
+    color: rgb(192, 28, 28) !important;
+}
+/* .blocx-card_img {
+    height: 320px;
+} */
 /* .blocx-mediaplayer_controls-list {
     width: 1020px;
 } */
