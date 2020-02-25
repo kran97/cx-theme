@@ -1,31 +1,19 @@
 import React, { Component } from 'react';
 import '../styles/page5.css'
-import { BlocxModalBody, BlocxModalHeader, BlocxModal } from 'blocx-react-fullbundle'
-
+import { BlocxModalBody, BlocxModalHeader, BlocxModal, BlocxButton, BlocxDropdown } from 'blocx-react-components'
 import modal_icon_close_default from "../app/assets/images/close.png";
-
-import {BlocxButton} from 'blocx-react-fullbundle'
-import { BlocxDropdown } from "blocx-react-fullbundle";
 import classnames from 'classnames';
 import product from '../app/assets/images/prod.png'
 import prodSuper from '../app/assets/images/prodSuperdrug.png';
 import prodBoosters from '../app/assets/images/prodBooter.png';
 
-export default class Page5 extends Component {
-
+class Page5 extends Component {
     constructor(props) {
-
         super(props)
-
         this.state = {
-
             showModal: true,
-
         }
-
     }
-
- 
     // onButtonClick() {
     //     let totalSteps = this.newstate.totalSteps;
     //     let activeStep = this.newstate.activeStep;
@@ -188,3 +176,4 @@ export default class Page5 extends Component {
     }
 
 }
+export default Page5

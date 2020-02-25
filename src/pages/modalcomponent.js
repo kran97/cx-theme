@@ -1,9 +1,7 @@
 
 import React, { Component } from 'react';
-import { BlocxModalBody, BlocxModalButtonControls, BlocxModalHeader, BlocxModal } from 'blocx-react-fullbundle'
-import { BlocxButton } from "blocx-react-fullbundle";
+import { BlocxModalBody, BlocxModalButtonControls, BlocxModalHeader, BlocxModal, BlocxButton, BlocxContentBoxType } from 'blocx-react-components'
 import classnames from 'classnames';
-import { BlocxContentBoxType } from "blocx-react-fullbundle";
 
 class WModal extends Component {
     constructor(props) {
@@ -76,7 +74,4 @@ class WModal extends Component {
         )
     }
 }
-
-
-
 export default WModal

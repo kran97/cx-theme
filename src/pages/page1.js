@@ -1,9 +1,8 @@
 import React from 'react';
-import { BlocxButton, BlocxNavBar, BlocxDivider, BlocxHero, BlocxHeroBody, BlocxHeroCarousel, BlocxContentBoxType, BlocxCard, BlocxCardText, BlocxCardBody, BlocxCardImage, BlocxCardHeader, BlocxFooter, BlocxFooterBody, BlocxContentBox } from 'blocx-react-fullbundle';
-
+import { BlocxButton, BlocxNavBar, BlocxDivider, BlocxHero, BlocxHeroBody, BlocxHeroCarousel, BlocxContentBoxType, BlocxCard, BlocxCardText, BlocxCardBody, BlocxCardImage, BlocxCardHeader, BlocxFooter, BlocxFooterBody, BlocxContentBox } from 'blocx-react-components';
 import page1json from '../json/page1.json';
 
-  export default class Page1 extends React.Component{
+  class Page1 extends React.Component{
     render(){
     let itemListFooter1 = page1json.footer.footerMenu1.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
     let itemListFooter2 = page1json.footer.footerMenu2.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
@@ -153,4 +152,4 @@ import page1json from '../json/page1.json';
   )
       }
       }
-
+      export default Page1

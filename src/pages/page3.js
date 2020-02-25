@@ -1,13 +1,9 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-
-import { BlocxButton, BlocxFooterBody, BlocxPagination, BlocxFooter, BlocxNavBar, BlocxDropdown, BlocxCard, BlocxCardText, BlocxCardBody, BlocxCardImage } from 'blocx-react-fullbundle';
-
+import { BlocxButton, BlocxFooterBody, BlocxPagination, BlocxFooter, BlocxNavBar, BlocxDropdown, BlocxCard, BlocxCardText, BlocxCardBody, BlocxCardImage } from 'blocx-react-components';
 import page3json from '../json/page3.json';
 import page1json from '../json/page1.json';
-export default class Page3 extends React.Component {
-
-
+class Page3 extends React.Component {
   state = {
     redirect: false,
     prod_type: 'Select',
@@ -185,4 +181,4 @@ export default class Page3 extends React.Component {
     )
   }
 }
-
+export default Page3

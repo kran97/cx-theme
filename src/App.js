@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 import Page1 from './pages/page1';
 import Page3 from './pages/page3';
 import Page4 from './pages/page4';

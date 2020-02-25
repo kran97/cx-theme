@@ -1,18 +1,10 @@
-
-
 import React, { Component } from 'react';
-import { BlocxMegaMenu, BlocxCard, BlocxCardText, BlocxCardImage } from "blocx-react-components";
-import { BlocxContentBox, BlocxContentBoxType } from "blocx-react-components";
-import { BlocxNavBar } from "blocx-react-components";
-import { BlocxFooter, BlocxFooterBody } from "blocx-react-components";
+import { BlocxMegaMenu, BlocxCard, BlocxCardText, BlocxCardImage, BlocxContentBox, BlocxContentBoxType, BlocxFooter, BlocxFooterBody, BlocxHero, BlocxHeroBody, BlocxHeroCarousel } from "blocx-react-components";
 import page13json from "../json/page13.json";
 import page1json from "../json/page1.json";
-import { BlocxHero, BlocxHeroBody, BlocxHeroCarousel } from "blocx-react-components";
 import megaMenuJson from "../json/megamenu.json"
 
-
-
-export default class Page14 extends Component {
+class Page14 extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -20,7 +12,6 @@ export default class Page14 extends Component {
             errors: { name: '' }
         }
     }
-
     handleValidation() {
         let fields = this.state.fields;
         let errors = {};
@@ -259,4 +250,4 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</p></B
     }
 
 }
-
+export default Page14

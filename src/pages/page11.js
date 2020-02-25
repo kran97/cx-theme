@@ -7,7 +7,7 @@ import WModal from '../pages/modalcomponent';
 import page10json from '../json/page10.json';
 import page1json from '../json/page1.json';
 
-export default class User extends Component {
+class User extends Component {
 
     constructor(props) {
         super(props);
@@ -293,3 +293,4 @@ export default class User extends Component {
         );
     }
 }
+export default User

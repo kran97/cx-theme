@@ -1,17 +1,11 @@
 import React from 'react';
 import '../styles/page7.css';
-import { BlocxHero, BlocxHeroBody, BlocxHeroCarousel } from "blocx-react-fullbundle";
-import { BlocxNavBar } from "blocx-react-fullbundle";
+import { BlocxHero, BlocxHeroBody, BlocxHeroCarousel, BlocxNavBar, BlocxCard, BlocxCardBody, BlocxCardImage, BlocxFooter, BlocxFooterBody, BlocxContentBox, BlocxContentBoxType, BlocxMediaPlayer } from "blocx-react-components";
 import carouseljson from "../json/page6.json";
-import { BlocxCard, BlocxCardBody, BlocxCardImage } from 'blocx-react-fullbundle';
-import { BlocxFooter, BlocxFooterBody } from 'blocx-react-fullbundle'
-import { BlocxContentBox, BlocxContentBoxType } from "blocx-react-fullbundle";
-import { BlocxMediaPlayer } from "blocx-react-fullbundle";
 import transform from "../app/assets/images/transform.png";
 import page1json from '../json/page1.json';
 
-
-export default class Page7 extends React.Component {
+class Page7 extends React.Component {
 
     constructor(props) {
 
@@ -258,3 +252,4 @@ export default class Page7 extends React.Component {
         )
     }
 }
+export default Page7

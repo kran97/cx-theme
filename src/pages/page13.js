@@ -1,11 +1,11 @@
 
 import React, { Component } from 'react';
-import { BlocxMegaMenu, BlocxHero, BlocxHeroBody, BlocxHeroCarousel, BlocxFooter, BlocxFooterBody, BlocxNavBar, BlocxCard, BlocxCardText, BlocxCardImage, BlocxContentBox, BlocxContentBoxType} from 'blocx-react-components';
+import { BlocxMegaMenu, BlocxHero, BlocxHeroBody, BlocxHeroCarousel, BlocxFooter, BlocxFooterBody, BlocxCard, BlocxCardText, BlocxCardImage, BlocxContentBox, BlocxContentBoxType} from 'blocx-react-components';
 import page13json from "../json/page13.json";
 import page1json from "../json/page1.json";
 import megaMenuJson from "../json/megamenu.json"
 
-export default class Page13 extends Component {
+class Page13 extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -238,3 +238,4 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</p></B
     }
 
 }
+export default Page13

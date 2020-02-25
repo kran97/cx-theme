@@ -40,19 +40,19 @@
 .blocx-card .blocx-card_body {
     padding: 0px 0px 25px 0px;
 }
-.blocx-datepicker-wrapper {
+/* .blocx-datepicker-wrapper {
     height: 50px;
     top: 20px;
     padding: 12px;
-}
+} */
 .blocx-button-primary {
     background-color: #2699FB;
     border-color: #2699FB;
 }
-.blocx-button {
+/* .blocx-button {
     margin-top: 50px;
     padding: 0px 27px;
-}
+} */
 .gray {
     color: #8E8E8E;
 }
@@ -62,9 +62,9 @@
 .dark-gray {
     color: #707070;
 }
-.cent {
+/* .cent {
     left: 150px;
-}
+} */
 .second {
     left: 75px;
 }

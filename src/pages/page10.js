@@ -1,17 +1,10 @@
-
 import React, { Component } from 'react';
-
-
-import { BlocxTextInput } from "blocx-react-components";
-import { BlocxNavBar } from "blocx-react-components";
-import { BlocxButton } from "blocx-react-components";
-import { BlocxFooter, BlocxFooterBody } from "blocx-react-components";
-import { BlocxHero, BlocxHeroBody, BlocxHeroCarousel } from "blocx-react-components";
-import { BlocxProgressIndicator } from "blocx-react-components";
+import { BlocxFooter, BlocxFooterBody, BlocxTextInput, BlocxNavBar, BlocxButton, BlocxHero, BlocxHeroBody, BlocxHeroCarousel, BlocxProgressIndicator } from "blocx-react-components";
 import { Link } from 'react-router-dom';
 import page10json from '../json/page10.json';
 import page1json from '../json/page1.json';
-export default class UserForm extends Component {
+
+class UserForm extends Component {
 
   constructor(props) {
     super(props);
@@ -184,7 +177,7 @@ export default class UserForm extends Component {
                 <Link to="/page11">
                   <div>
                     <BlocxButton.Primary label="Next" onClick={this.onButtonClick.bind(this)}>
-                    </BlocxButton.Primary>&nbsp;
+                    </BlocxButton.Primary>
                 </div>
                 </Link>
               </div>
@@ -284,3 +277,4 @@ export default class UserForm extends Component {
     );
   }
 }
+export default UserForm

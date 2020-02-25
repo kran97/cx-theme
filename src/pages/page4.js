@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react';
-import { BlocxButton, BlocxNavBar, BlocxTab, BlocxTable, BlocxTabContent, BlocxTabContentItem, BlocxTabLabel, BlocxTabNav, BlocxCard, BlocxCardText, BlocxCardBody, BlocxCardImage, BlocxCardHeader, BlocxFooter, BlocxFooterBody } from 'blocx-react-fullbundle';
-
+import { BlocxButton, BlocxNavBar, BlocxTab, BlocxTable, BlocxTabContent, BlocxTabContentItem, BlocxTabLabel, BlocxTabNav, BlocxCard, BlocxCardText, BlocxCardBody, BlocxCardImage, BlocxCardHeader, BlocxFooter, BlocxFooterBody } from 'blocx-react-components';
 import page4json from '../json/page4.json';
 import page1json from '../json/page1.json';
 

@@ -1,36 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/page6.css';
-import { BlocxHero, BlocxHeroBody, BlocxHeroCarousel } from "blocx-react-fullbundle";
-import { BlocxNavBar } from "blocx-react-fullbundle";
 import carouseljson from "../json/page6.json";
-
-import { BlocxCard, BlocxCardText, BlocxCardBody, BlocxCardImage } from 'blocx-react-fullbundle';
-import { BlocxFooter, BlocxFooterBody } from 'blocx-react-fullbundle'
+import { BlocxCard, BlocxCardText, BlocxCardBody, BlocxCardImage, BlocxHero, BlocxHeroBody, BlocxHeroCarousel, BlocxFooter, BlocxFooterBody, BlocxNavBar } from 'blocx-react-components';
 import card1 from "../app/assets/images/card1.png";
 import card2 from "../app/assets/images/card2.png";
 import card3 from "../app/assets/images/card3.png";
 import card4 from "../app/assets/images/card4.png";
 import page1json from '../json/page1.json';
 
-export default class Page6 extends React.Component {
-
+class Page6 extends React.Component {
     constructor(props) {
-
         super(props);
-
         this.state = {
-
             fields: { name: '' },
-
             errors: { name: '' }
-
         }
-
     }
-
-
-
     handleValidation() {
 
         let fields = this.state.fields;
@@ -436,3 +422,4 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
         )
     }
 }
+export default Page6
