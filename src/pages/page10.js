@@ -63,10 +63,8 @@ class UserForm extends Component {
     this.handleValidation()
     if (this.state.errors.name == ''&&field=="name")
       this.info.name = val;
-
     if(this.state.errors.mobile == ''&&field=="mobile")
       this.info.mobile = val;
-
      if(this.state.errors.email == ''&&field=="email") {
       this.info.email = val;
     }
