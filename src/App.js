@@ -34,7 +34,7 @@ class App extends Component{
           <Route path="/book_appoinment" component={UserForm} />
           <Route path="/confirm_appoinment" component={User} />
           <Route path="/global_site" component={Page13} />
-          <Route path="/page14" component={Page14} />
+          <Route path="/ourcompany" component={Page14} />
           <Route path="/modal" component={WModal} />  
           <Route path="/success_stories" component={ Page6 } />
           <Route path="/my_story" component={ Page7 } />

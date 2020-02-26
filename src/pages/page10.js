@@ -48,7 +48,7 @@ class UserForm extends Component {
     }
     if (fields["mobile"] !== "") {
       errors.mobile =
-        fields["mobile"].length != 10
+        fields["mobile"].length !== 10
           ? 'Mobile must be of 10 digits'
           : '';
     }
@@ -61,11 +61,11 @@ class UserForm extends Component {
     let fields = this.state.fields;
     fields[field] = val;
     this.handleValidation()
-    if (this.state.errors.name == ''&&field=="name")
+    if (this.state.errors.name === ''&&field==="name")
       this.info.name = val;
-    if(this.state.errors.mobile == ''&&field=="mobile")
+    if(this.state.errors.mobile ===''&&field==="mobile")
       this.info.mobile = val;
-     if(this.state.errors.email == ''&&field=="email") {
+     if(this.state.errors.email === ''&&field==="email") {
       this.info.email = val;
     }
     console.log(this.info);
@@ -79,7 +79,7 @@ class UserForm extends Component {
   }
   regex = "[A-Za-z]{3}";
   onButtonClick() {
-    if (this.state.errors.name == '' && this.state.errors.mobile == '' && this.state.errors.email == '') {
+    if (this.state.errors.name === '' && this.state.errors.mobile === '' && this.state.errors.email === '') {
       let myObject = {}
       sessionStorage.myObject = JSON.stringify(this.info);
       sessionStorage.setItem(myObject, sessionStorage.myObject)

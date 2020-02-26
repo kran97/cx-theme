@@ -55,11 +55,11 @@ color: white;
   font-size: 23px;
   margin: 10px 37px 10px 37px;
 }
-.cardContainer{
-  /* margin:5px 23px 5px 37px;
-  display: flex; */
-  /* height:200px; */
-}
+/* .cardContainer{
+  margin:5px 23px 5px 37px;
+  display: flex;
+  height:200px;
+} */
 .itemHeader{
   font-weight: bold;
   font-size: 15.5px;
@@ -84,10 +84,10 @@ color: white;
 .cardView ,.blocx-card{
   border-style: none;
 }
-.midBody{
-  /* display: flex; */
-  /* margin:65px 37px 0px 37px; */
-}
+/* .midBody{
+  display: flex;
+  margin:65px 37px 0px 37px;
+} */
 .midBody-container{
   /* flex-grow: 1; */
   text-align: center;
@@ -105,11 +105,11 @@ color: white;
 .midBody-content h2{
   margin: 50px 0px;
 }
-.midBody-button{
-  /* margin: 50px 120px 0 160px; */
-  /* display: flex;
-  justify-content: space-between; */
-}
+/* .midBody-button{
+  margin: 50px 120px 0 160px;
+  display: flex;
+  justify-content: space-between;
+} */
 .btn1{
   background-color: #2699FB;
   border-color: #2699FB;
@@ -119,17 +119,17 @@ color: white;
   background-color: #2699FB;
   border-color: #2699FB;
 }
-.diet-tips{
-  /* display: flex;
-  margin: 65px 37px; */
-}
+/* .diet-tips{
+  display: flex;
+  margin: 65px 37px;
+} */
 .diet-tips-image{
   text-align: center;
 }
-.diet-tips-text{
-  /* padding: 23px; */
-  /* margin-left: 10px; */
-}
+/* .diet-tips-text{
+  padding: 23px;
+  margin-left: 10px;
+} */
 .divider{
   margin-left: 3%;
   margin-bottom: 50px;
