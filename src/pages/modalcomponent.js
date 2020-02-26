@@ -10,8 +10,6 @@ class WModal extends Component {
             showModal: true,
         }
     }
-
-
     handleClick = (e) => {
         e.preventDefault()
         if (this.props.onClick) {
@@ -28,22 +26,18 @@ class WModal extends Component {
         if (this.props.onClick) {
             this.props.onClick(e)
         }
+        console.log('hi')
         this.setState({
             showModal: !this.state.showModal
         })
         console.log("modal--->", (e.target.id) ? e.target.id + 'd' : 'closed');
-        //this.props.history.push("/page8");
+        //this.props.history.push("/doctor_select");
     }
-
-
-
     render() {
         const { showModal } = this.state;
         const display = classnames({ 'block': showModal, 'none': !showModal });
         return (
-
             <React.Fragment>
-
                 <BlocxModal.Default style={{ display: display }} >
                     <div className="blocx-grid">
                         <div className="col-md-2 modalimage">
@@ -51,12 +45,12 @@ class WModal extends Component {
                         </div>
                         <div className="col-md-8">
                             <BlocxModalHeader.Default >
-                                <BlocxContentBoxType.Body >
-                                    <h4 style={{padding:'0px'}}>Your doctor appointment is confirmed.</h4>
+                                <BlocxContentBoxType.Body style={{padding:'0px'}} >
+                                    Your doctor appointment is confirmed.
                                 </BlocxContentBoxType.Body >
                             </BlocxModalHeader.Default>
                             <BlocxModalBody.Default >
-                                    <p  style={{padding:'0px'}}>A confirmation email and reminder sent to your contacts. detracto, vidit vituperatoribus duo id. Afert dtraxis voluptatatum vis eu innermis eloquntium cum id. Mei aequeue.
+                                    <p style={{padding:'0px'}}>A confirmation email and reminder sent to your contacts. detracto, vidit vituperatoribus duo id. Afert dtraxis voluptatatum vis eu innermis eloquntium cum id. Mei aequeue.
                                     </p>
                                 <BlocxModalButtonControls.Default >
                                     <BlocxButton.Secondary_Outline className="dialogboxbutton" label="Reschedule" onClick={(e)=>this.onRescheduleButtonClick(e)} >

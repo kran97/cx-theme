@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BlocxFooter, BlocxFooterBody, BlocxTextInput, BlocxNavBar, BlocxButton, BlocxHero, BlocxHeroBody, BlocxHeroCarousel, BlocxProgressIndicator } from "blocx-react-components";
-import { Link } from 'react-router-dom';
 import page10json from '../json/page10.json';
 import page1json from '../json/page1.json';
 
@@ -33,7 +32,7 @@ class UserForm extends Component {
     let fields = this.state.fields;
     let errors = this.state.errors;
     const validEmailRegex =
-      RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
+      RegExp(/^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/);
     if (fields["name"] !== "") {
       errors.name =
         fields["name"].length < 5
@@ -172,12 +171,10 @@ class UserForm extends Component {
                   </div>
                 </div>
 
-                <Link to="/page11">
                   <div>
                     <BlocxButton.Primary label="Next" onClick={this.onButtonClick.bind(this)}>
                     </BlocxButton.Primary>
                 </div>
-                </Link>
               </div>
             </div>
           </div>

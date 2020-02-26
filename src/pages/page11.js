@@ -8,7 +8,6 @@ import page10json from '../json/page10.json';
 import page1json from '../json/page1.json';
 
 class User extends Component {
-
     constructor(props) {
         super(props);
         this.state = {
@@ -19,32 +18,22 @@ class User extends Component {
             activeStep: 4,
             totalSteps: 4
         };
-
         var myObject = JSON.parse(sessionStorage.myObject);
         this.user = {
             name: myObject.name,
             email: myObject.email,
             mobile: myObject.mobile
         }
-
     }
     handleProgressButtonClick() {
-
         let totalSteps = this.newstate.totalSteps;
-
         let activeStep = this.newstate.activeStep;
-
         if (activeStep <= totalSteps) {
-
             this.setState({
-
                 activeStep: activeStep + 1
-
             })
-
         }
     }
-
     handleValidation() {
         let fields = this.state.fields;
         let errors = {};
@@ -129,167 +118,113 @@ class User extends Component {
                         </div>
                         <div className='blocx-grid'>
                             <div className="col-md-12 col-sm-12">
-                                <table >
-                                    <thead>
-                                        <tr>
-                                            <td className="table-heading">City</td>
-                                            <td className="table-heading">Location</td>
-                                            <td className="table-heading">Speciality</td>
-                                        </tr>
-                                    </thead>
-                                </table>
+                                <div className="col-md-3" style={{ paddingBottom: "0px" }}>
+                                    City
+                                </div>
+                                <div className="col-md-3" style={{ paddingBottom: "0px" }}>
+                                    Location
+                                </div>
+                                <div className="col-md-3" style={{ paddingBottom: "0px" }}>
+                                    Speciality
+                                </div>
                                 <BlocxDivider
-                                    height={0.01}
+                                    height={1}
                                     widthInPer={true}
-                                    width={100}
+                                    width={80}
                                     color="#898989"
                                     type="horizontal"
                                 ></BlocxDivider>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td className="table-content">Bangalore</td>
-                                            <td className="table-content">Apolo Bargetta,City</td>
-                                            <td className="table-content">Cardiology</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <td className="table-heading">Doctor Name</td>
-                                            <td className="table-heading">Appointment Time</td>
-                                            <td className="table-heading">Your Details </td>
-                                        </tr>
-                                    </thead>
-                                </table>
+                                <div className="col-md-3 table-content" style={{ paddingTop: "0px" }}>
+                                    Bangalore
+                                </div>
+                                <div className="col-md-3 table-content" style={{ paddingTop: "0px" }}>
+                                    Apolo Bargetta,City
+                                </div>
+                                <div className="col-md-3 table-content" style={{ paddingTop: "0px" }}>
+                                    Cardiology
+                                </div>
+                                <div className="col-md-3"></div>
+                                <div className="col-md-3" style={{ paddingBottom: "0px" }}>
+                                    Doctor Name
+                                </div>
+                                <div className="col-md-3" style={{ paddingBottom: "0px" }}>
+                                    Appointment Time
+                                </div>
+                                <div className="col-md-3" style={{ paddingBottom: "0px" }}>
+                                    Your Details
+                                </div>
                                 <BlocxDivider
-                                    height={0.01}
+                                    height={1}
                                     widthInPer={true}
-                                    width={100}
+                                    width={80}
                                     color="#898989"
                                     type="horizontal"
                                 ></BlocxDivider>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td className="table-content">
-                                                <tr>Atul Prakash</tr>
-                                                <tr>MBBS, MD (Gen Med)</tr>
-                                                <tr>DM (Cardiology)</tr>
-                                                <tr>Senior Cardiologist</tr>
-                                            </td>
-                                            <td className="table-content">
-                                                <tr>Monday</tr>
-                                                <tr>9:30am-10:30am</tr>
-                                            </td>
-                                            <td className="table-content">
-                                                <tr>{this.user.name}</tr>
-                                                <tr>{this.user.email}</tr>
-                                                <tr>{this.user.mobile}</tr>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <BlocxButton.Primary label="Confirm" onClick={this.confirmButton}>
-                                </BlocxButton.Primary>
+                                <div className="col-md-3 table-content" style={{ paddingTop: "0px" }}>
+                                    Atul Prakash<br></br>MBBS, MD (Gen Med)<br></br>DM (Cardiology)<br></br>Senior Cardiologist
+                                </div>
+                                <div className="col-md-3 table-content" style={{ paddingTop: "0px" }}>
+                                    Monday<br></br>9:30am-10:30am
+                                </div>
+                                <div className="col-md-3 table-content" style={{ paddingTop: "0px" }}>
+                                    {this.user.name}<br></br>
+                                    {this.user.email}<br></br>
+                                    {this.user.mobile}<br></br>
+                                </div><br></br>
+                                <div className="col-md-2">
+                                    <BlocxButton.Primary label="Confirm" onClick={this.confirmButton}>
+                                    </BlocxButton.Primary>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-1 col-sm-0">
-                    </div>
                 </div>
                 <div>
-
                     <BlocxFooter>
-
                         <BlocxFooterBody.Default>
-
                             <BlocxFooterBody.Grid>
-
                                 <div className="col-md-6">
-
                                     <BlocxFooterBody.Grid>
-
                                         <div className="col-md-3">
-
                                             <h1>Logo</h1>
-
                                         </div>
-
                                         <div className="col-md-3">
-
                                             <ul className="blocx-menu">
-
                                                 {itemListFooter1}
-
                                             </ul>
-
                                         </div>
-
                                         <div className="col-md-3">
-
                                             <ul className="blocx-menu">
-
                                                 {itemListFooter2}
-
                                             </ul>
-
                                         </div>
-
                                         <div className="col-md-3">
-
                                             <ul className="blocx-menu">
-
                                                 {itemListFooter3}
-
                                             </ul>
-
                                         </div>
-
                                     </BlocxFooterBody.Grid>
-
                                 </div>
-
                                 <div className="col-md-6">
-
                                     <BlocxFooterBody.Grid>
-
                                         <div className="col-md-6">
-
                                         </div>
-
                                         <div className="col-md-6">
-
                                             <ul className="blocx-menu social-media">
-
                                                 <li><a href="#/"><i className="fa fa-instagram footr" aria-hidden="true"></i> </a></li>
-
                                                 <li><a href="#/"><i className="fa fa-twitter footr" aria-hidden="true"></i> </a></li>
-
                                                 <li><a href="#/"><i className="fa fa-facebook footr" aria-hidden="true"></i> </a></li>
-
                                                 <li><a href="#/"><i className="fa fa-globe footr" aria-hidden="true"></i> </a></li>
-
                                             </ul>
-
                                         </div>
-
                                     </BlocxFooterBody.Grid>
-
                                 </div>
-
                             </BlocxFooterBody.Grid>
-
                         </BlocxFooterBody.Default>
-
                     </BlocxFooter>
-
                 </div>
                 <div id="modal"></div>
-
-
-            </React.Fragment>
+            </React.Fragment >
         );
     }
 }

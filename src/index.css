@@ -349,10 +349,13 @@ color: #A6ADB4;
 .headingtext{
 text-align: left;
 font: Bold 32px/38px Helvetica;
+padding-bottom: 0px;
 }
 .subheadingtext{
 text-align: left;
 font: Bold 32px/38px Helvetica;
+padding-top: 0px;
+padding-bottom: 0px;
 }
 .subsubheadingtext{
   text-align: left;

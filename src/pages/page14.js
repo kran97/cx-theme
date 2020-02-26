@@ -51,9 +51,9 @@ class Page14 extends Component {
 
     }
 
-    onStateChange=(value)=>{
-        console.log("isSubMenuOpen: ",value);
-      }
+    onStateChange = (value) => {
+        console.log("isSubMenuOpen: ", value);
+    }
     render() {
         let itemListFooter1 = page1json.footer.footerMenu1.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
         let itemListFooter2 = page1json.footer.footerMenu2.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
@@ -86,13 +86,11 @@ class Page14 extends Component {
                     <div className="col-md-1 col-sm-0">
                     </div>
                     <div className="col-md-10 col-sm-12">
-                        <div className='blocx-grid'>
-                            <BlocxContentBox>
-                                <h2 className="col-sm-12 col-md-12 headingtext">Our Company</h2>
-                                <h2 className="col-sm-12 col-md-12 subheadingtext">A successful and family owned Company</h2>
-                                <BlocxContentBoxType.Body className="col-sm-12 col-md-12 maintext">Boehringer Ingelheim is a global group of companies embracing many cultures and diverse societies. Learn more about the financial highlights, the corporate vision, the organisation, the Board of Managing Directors and the company’s history as well as our engagement for scientific, cultural and environmental purposes. Improving the health and quality of life of humans and animals is the goal of the research-driven pharmaceutical company Boehringer Ingelheim. The focus in doing so is on diseases for which no satisfactory treatment option exists to date. The company therefore concentrates on developing innovative therapies that can extend patients’ lives. In animal health, Boehringer Ingelheim stands for advanced prevention. Family-owned since it was established in 1885, Boehringer Ingelheim is one of the pharmaceutical industry’s top 20 companies. Some 50,000 employees create value through innovation daily for the three business areas human pharmaceuticals, animal health and biopharmaceuticals. In 2018, Boehringer Ingelheim achieved net sales of 17.5 billion euros. R&D expenditure, exceeding three billion euros, corresponded to 18.1 per cent of net sales. As a family-owned company, Boehringer Ingelheim plans in generations and focuses on long-term success. The company therefore aims at organic growth from its own resources with simultaneous openness to partnerships and strategic alliances in research. In everything it does, Boehringer Ingelheim naturally adopts responsibility towards mankind and the environment.</BlocxContentBoxType.Body>
-                            </BlocxContentBox>
-                        </div>
+                        <BlocxContentBox>
+                            <h2 className="col-sm-12 col-md-12 headingtext" style={{paddingBottom:"0px", margin:'0px'}}>Our Company</h2>
+                            <h3 className="col-sm-12 col-md-12 subheadingtext" style={{paddingBottom:"0px", margin:'0px'}}>A successful and family owned Company</h3>
+                            <BlocxContentBoxType.Body className="col-sm-12 col-md-12 maintext">Boehringer Ingelheim is a global group of companies embracing many cultures and diverse societies. Learn more about the financial highlights, the corporate vision, the organisation, the Board of Managing Directors and the company’s history as well as our engagement for scientific, cultural and environmental purposes. Improving the health and quality of life of humans and animals is the goal of the research-driven pharmaceutical company Boehringer Ingelheim. The focus in doing so is on diseases for which no satisfactory treatment option exists to date. The company therefore concentrates on developing innovative therapies that can extend patients’ lives. In animal health, Boehringer Ingelheim stands for advanced prevention. Family-owned since it was established in 1885, Boehringer Ingelheim is one of the pharmaceutical industry’s top 20 companies. Some 50,000 employees create value through innovation daily for the three business areas human pharmaceuticals, animal health and biopharmaceuticals. In 2018, Boehringer Ingelheim achieved net sales of 17.5 billion euros. R&D expenditure, exceeding three billion euros, corresponded to 18.1 per cent of net sales. As a family-owned company, Boehringer Ingelheim plans in generations and focuses on long-term success. The company therefore aims at organic growth from its own resources with simultaneous openness to partnerships and strategic alliances in research. In everything it does, Boehringer Ingelheim naturally adopts responsibility towards mankind and the environment.</BlocxContentBoxType.Body>
+                        </BlocxContentBox>
                         <div>
                             <h3 className="col-sm-12 col-md-12 subsubheadingtext">More related contents</h3>
                         </div>
