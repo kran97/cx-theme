@@ -14,6 +14,7 @@ import Page7 from './pages/page7';
 import Page8 from './pages/page8';
 import Page5 from './pages/page5';
 import Page9 from './pages/page9';
+import Home from './pages/homepage';
 // import Test from './pages/testing';
 // function App() {
 //   return(
@@ -26,7 +27,8 @@ class App extends Component{
       <Router>
       <div>
         <Switch>
-        <Route exact path="/" component={Page1} />
+          <Route exact path="/" component={Home} />
+        <Route exact path="/pharma" component={Page1} />
         {/* <Route path="/page1" component={Page1} /> */}
         <Route path="/products" component={Page3} />
         <Route path="/buy products" component={Page4} />

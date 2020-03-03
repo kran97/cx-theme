@@ -44,7 +44,7 @@
     "hero": [
         {
               "id": "0",
-              "image": "/assets/images/Image@2x.png"
+              "image": "/assets/images/Image@2x_1.png"
         },
         {
               "id": "1",
@@ -52,7 +52,7 @@
         },
         {
               "id": "2",
-              "image": "/assets/images/Image@2x.png"
+              "image": "/assets/images/Image@2x_1.png"
         }
   ]
 }
