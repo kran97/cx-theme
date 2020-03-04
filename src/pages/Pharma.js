@@ -2,7 +2,7 @@ import React from 'react';
 import { BlocxButton, BlocxNavBar, BlocxDivider, BlocxHero, BlocxHeroBody, BlocxHeroCarousel, BlocxContentBoxType, BlocxCard, BlocxCardText, BlocxCardBody, BlocxCardImage, BlocxCardHeader, BlocxFooter, BlocxFooterBody, BlocxContentBox } from 'blocx-react-components';
 import page1json from '../json/page1.json';
 
-class Page1 extends React.Component {
+class Pharma extends React.Component {
   render() {
     let itemListFooter1 = page1json.footer.footerMenu1.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
     let itemListFooter2 = page1json.footer.footerMenu2.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
@@ -112,8 +112,9 @@ class Page1 extends React.Component {
                   </div>
                 </BlocxFooterBody.Grid>
               </div>
-              <div className="col-md-7">
+              <div className="col-md-6">
                 <BlocxFooterBody.Grid>
+                <div className="col-md-6"></div>
                   <div className="col-md-6">
                     <ul className="blocx-menu social-media">
                       <li><a href="#/"><i className="fa fa-instagram footr" aria-hidden="true"></i> </a></li>
@@ -131,4 +132,4 @@ class Page1 extends React.Component {
     )
   }
 }
-export default Page1
+export default Pharma

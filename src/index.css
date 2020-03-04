@@ -158,10 +158,13 @@ color: white;
   line-height: 5px;
   font-size: 13px;
 }
-.blocx-grid .col-md-7 {
+/* .blocx-grid .col-md-7 {
   width: 20%;
   margin-left: 30%;
   text-align: right;
+} */
+.blocx-grid .col-md-7{
+  margin-top: 0px !important;
 }
 .fa{
   font-size: 15px;
@@ -428,7 +431,38 @@ width: 352px;
 /* .blocx-content-container .b-para-medium {
   width: 800px;
 } */
-
+.modalp{
+  padding: 0px;
+}
 .blocx-card .blocx-card_links .linkTo{
   text-decoration:none;
+}
+.buttonsearch{
+  padding-top: 65px;
+}
+.dropsp{
+  padding-bottom: 0px;
+}
+.doclist{
+  padding-right: 80px;
+}
+.docpro{
+  padding-top: 0px;
+}
+.wbdate{
+padding-bottom: 20px;
+}
+.searchbut{
+padding-top: 54px;
+}
+.headmar{
+  margin: 0px;
+}
+.cardsty{
+width: 400px;
+height: -1px;
+}
+.cardhw{
+  width: 310px;
+  height: 400px;
 }

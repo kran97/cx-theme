@@ -5,7 +5,7 @@ import carouseljson from "../json/page8.json";
 import logo from "../logo.svg"; //Not the required one
 import page1json from '../json/page1.json';
 
-class Page8 extends React.Component {
+class DoctorAppointment extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -137,7 +137,7 @@ class Page8 extends React.Component {
                             ]}
                         />
                     </div>
-                    <div className="col-md-2" style={{paddingTop:'65px'}}>
+                    <div className="col-md-2 buttonsearch">
                         <BlocxButton.Primary label="Search" onClick={(e) => handleClick(e)}></BlocxButton.Primary>&nbsp;
                     </div>
                 </div>
@@ -260,4 +260,4 @@ class Page8 extends React.Component {
         )
     }
 }
-export default Page8
+export default DoctorAppointment

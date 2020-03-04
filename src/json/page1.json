@@ -77,6 +77,22 @@
             "image": "/assets/images/blocx-carousel_img-3.jpg"
         }
     ],
+    "chipsChoice":[{ "id": 1, "value": "Morning", "isSelected": true, "iconClass": "" }, 
+        { "id": 2, "value": "Afternoon", "isSelected": false, "iconClass": "" }, 
+        { "id": 3, "value": "Night", "isSelected": false, "iconClass": "" }
+    ],
+    "chipsTime1":[{ "id": 1, "value": "09.00AM-09.30AM", "isSelected": true }, 
+        { "id": 2, "value": "09.30AM-10.00AM", "isSelected": false }, 
+        { "id": 3, "value": "10.00AM-10.30AM", "isSelected": false }
+    ],
+    "chipsTime2":[{ "id": 1, "value": "01.00PM-01.30PM", "isSelected": true }, 
+        { "id": 2, "value": "01.30PM-02.00PM", "isSelected": false }, 
+        { "id": 3, "value": "02.00PM-02.30PM", "isSelected": false }
+    ],
+    "chipsTime3":[{ "id": 1, "value": "06.00PM-06.30PM", "isSelected": true }, 
+        { "id": 2, "value": "06.30PM-07.00PM", "isSelected": false }, 
+        { "id": 3, "value": "07.00PM-07.30PM", "isSelected": false }
+    ],
     "footer": {
         "footerMenu1": [
             {

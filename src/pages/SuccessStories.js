@@ -9,7 +9,7 @@ import card3 from "../app/assets/images/card3.png";
 import card4 from "../app/assets/images/card4.png";
 import page1json from '../json/page1.json';
 
-class Page6 extends React.Component {
+class SuccessStories extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -61,7 +61,7 @@ class Page6 extends React.Component {
 
                 <div className="blocx-grid">
 
-                    <div className="col-md-3" style={{ width: '310px', height: '400px' }}>
+                    <div className="col-md-3 cardhw">
 
                         <BlocxCard.Variant5 className="card-page6">
 
@@ -88,7 +88,7 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
                         </BlocxCard.Variant5>
 
                     </div>
-                    <div className="col-md-3" style={{ width: '310px', height: '400px' }}>
+                    <div className="col-md-3 cardhw">
 
                         <BlocxCard.Variant5>
 
@@ -117,7 +117,7 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
                         </BlocxCard.Variant5>
 
                     </div>
-                    <div className="col-md-3" style={{ width: '310px', height: '400px' }}>
+                    <div className="col-md-3 cardhw">
 
                         <BlocxCard.Variant5>
 
@@ -146,7 +146,7 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
                         </BlocxCard.Variant5>
 
                     </div>
-                    <div className="col-md-3" style={{ width: '310px', height: '400px' }}>
+                    <div className="col-md-3 cardhw">
 
                         <BlocxCard.Variant5>
 
@@ -175,7 +175,7 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
                         </BlocxCard.Variant5>
 
                     </div>
-                    <div className="col-md-3" style={{ width: '310px', height: '400px' }}>
+                    <div className="col-md-3 cardhw">
 
                         <BlocxCard.Variant5>
 
@@ -204,7 +204,7 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
                         </BlocxCard.Variant5>
 
                     </div>
-                    <div className="col-md-3" style={{ width: '310px', height: '400px' }}>
+                    <div className="col-md-3 cardhw">
 
                         <BlocxCard.Variant5>
 
@@ -233,7 +233,7 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
                         </BlocxCard.Variant5>
 
                     </div>
-                    <div className="col-md-3" style={{ width: '310px', height: '400px' }}>
+                    <div className="col-md-3 cardhw">
 
                         <BlocxCard.Variant5>
 
@@ -262,7 +262,7 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
                         </BlocxCard.Variant5>
 
                     </div>
-                    <div className="col-md-3" style={{ width: '310px', height: '400px' }}>
+                    <div className="col-md-3 cardhw">
 
                         <BlocxCard.Variant5>
 
@@ -385,4 +385,4 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
         )
     }
 }
-export default Page6
+export default SuccessStories

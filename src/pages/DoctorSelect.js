@@ -6,12 +6,14 @@ import navData from "../json/navData81.json";
 import logo from "../logo.svg"; //Not the required one
 import page1json from '../json/page1.json';
 
-class Page9 extends React.Component {
+class DoctorSelect extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             fields: { name: '' },
             errors: { name: '' },
+            value1: "Morning",
+            Value2: "Afternoon",
         }
         this.newstate = {
             activeStep: 2,
@@ -91,6 +93,7 @@ class Page9 extends React.Component {
         let itemListFooter2 = page1json.footer.footerMenu2.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
         let itemListFooter3 = page1json.footer.footerMenu3.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
         let { activeStep, totalSteps } = this.newstate
+        // let { value1, value2 } = this.state
         return (
             <React.Fragment>
                 <div>
@@ -115,7 +118,7 @@ class Page9 extends React.Component {
                 </div>
                 <div className="padss blocx-grid">
                     <div className="blocx-input-group col-md-3">
-                        <div style={{ paddingBottom: '0px' }}><b>Specialty</b></div>
+                        <div className="dropsp"><b>Specialty</b></div>
                         <BlocxDropdown
                             placeholder="Select..."
                             options={[
@@ -134,12 +137,12 @@ class Page9 extends React.Component {
                         />
                     </div>
                     <div className="blocx-input-group col-md-3">
-                        <div style={{ paddingBottom: '20px' }}><b>Date</b></div>
+                        <div className="wbdate"><b>Date</b></div>
                         <BlocxDatePicker
                             value="2020-01-22"
                         />
                     </div>
-                    <div className="searchbut col-md-2" style={{ paddingTop: '54px' }}>
+                    <div className="searchbut col-md-2">
                         <BlocxButton.Primary label="Search" onClick={(e) => handleClick(e)}></BlocxButton.Primary>&nbsp;
                     </div>
                 </div>
@@ -194,12 +197,12 @@ class Page9 extends React.Component {
                         />
                     </div>
                 </div>
-                <div className="padss blocx-grid" style={{ paddingRight: '80px' }}>
-                    <div className="bgwhite col-md-12" style={{ width: '' }}>
+                <div className="padss blocx-grid doclist">
+                    <div className="bgwhite col-md-12">
                         <div className="col-md-1">
                             <img className="image-male" src='/assets/images/male.png' alt="Card caption" />
                         </div>
-                        <div className="col-md-4" style={{ paddingTop: '0px' }}>
+                        <div className="col-md-4 docpro" >
                             <div className="row-md-4">
                                 <p className="doc"><b>Atul Prakash</b></p>
                             </div>
@@ -207,8 +210,8 @@ class Page9 extends React.Component {
                                 <p className="info-doc">MBBS MD (Gen Med) DM (Cardiology)</p>
                             </div>
                         </div>
-                        <div className="col-md-3" style={{ paddingTop: '0px' }}>
-                            <div className="col-md-12" style={{ paddingTop: '0px' }}>
+                        <div className="col-md-3 docpro">
+                            <div className="col-md-12 docpro">
                                 <div className="row-md-6">
                                     <p><b>Senior Cardiologist</b></p>
                                 </div>
@@ -217,8 +220,8 @@ class Page9 extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-2" style={{ paddingTop: '0px' }}>
-                            <div className="col-md-12" style={{ paddingTop: '0px' }}>
+                        <div className="col-md-2 docpro">
+                            <div className="col-md-12 docpro">
                                 <div className="row-md-6">
                                     <p><b>Mon-Friday</b></p>
                                 </div>
@@ -227,36 +230,34 @@ class Page9 extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-2" style={{ paddingTop: '0px' }}>
+                        <div className="col-md-2 docpro">
                             <div className="col-md-12">
                                 <BlocxButton.Primary label="Select" onClick={this.onButtonClick.bind(this)}></BlocxButton.Primary>&nbsp;
                             </div>
                         </div>
-                        <div className="col-md-1"></div>
-                        <div className="col-md-4" style={{ marginTop: '' }}>
+                        <div className="col-md-5">
                             <BlocxChips
-                                data={[{ id: 1, value: 'Morning', isSelected: true, iconClass: "" }, { id: 2, value: 'Afternoon', isSelected: false, iconClass: "" }, { id: 3, value: 'Night', isSelected: false, iconClass: "" }]}
-                                type="Action"
+                                data={page1json.chipsChoice}
+                                type="Choice"
                                 onClick={(item, data) => action(item, data)}
                             />
                         </div>
-                        <div className="col-md-1"></div>
-                        <div className="col-md-6" style={{ marginTop: '30px' }}>
+                        <div className="col-md-7">
                             <BlocxChips
-                                data={[{ id: 1, value: '09.00AM-09.30AM', isSelected: true }, { id: 2, value: '09.30AM-10.00AM', isSelected: false }, { id: 3, value: '10.00AM-10.30AM', isSelected: false }]}
-                                type="Filter"
+                                data={page1json.chipsTime1}
+                                type="Choice"
                                 onChange={(item, data) => filterChange(item, data)}
                             />
                         </div>
                     </div>
                 </div>
                 <br></br>
-                <div className="padss blocx-grid" style={{ paddingRight: '80px' }}>
-                    <div className="bgwhite col-md-12" style={{ width: '' }}>
+                <div className="padss blocx-grid doclist" >
+                    <div className="bgwhite col-md-12">
                         <div className="col-md-1">
                             <img className="image-male" src='/assets/images/male.png' alt="Card caption" />
                         </div>
-                        <div className="col-md-4" style={{ paddingTop: '0px' }}>
+                        <div className="col-md-4 docpro">
                             <div className="row-md-4">
                                 <p className="doc"><b>Danya N</b></p>
                             </div>
@@ -264,8 +265,8 @@ class Page9 extends React.Component {
                                 <p className="info-doc">MBBS MD (Gen Med) DM (Cardiology)</p>
                             </div>
                         </div>
-                        <div className="col-md-3" style={{ paddingTop: '0px' }}>
-                            <div className="col-md-12" style={{ paddingTop: '0px' }}>
+                        <div className="col-md-3 docpro">
+                            <div className="col-md-12 docpro">
                                 <div className="row-md-6">
                                     <p><b>Senior Cardiologist</b></p>
                                 </div>
@@ -274,8 +275,8 @@ class Page9 extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-2" style={{ paddingTop: '0px' }}>
-                            <div className="col-md-12" style={{ paddingTop: '0px' }}>
+                        <div className="col-md-2 docpro">
+                            <div className="col-md-12 docpro">
                                 <div className="row-md-6">
                                     <p><b>Mon-Friday</b></p>
                                 </div>
@@ -284,36 +285,34 @@ class Page9 extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-2" style={{ paddingTop: '0px' }}>
+                        <div className="col-md-2 docpro">
                             <div className="col-md-12">
                                 <BlocxButton.Primary label="Select" onClick={this.onButtonClick.bind(this)}></BlocxButton.Primary>&nbsp;
                             </div>
                         </div>
-                        <div className="col-md-1"></div>
-                        <div className="col-md-4" style={{ marginTop: '' }}>
+                        <div className="col-md-5">
                             <BlocxChips
-                                data={[{ id: 1, value: 'Morning', isSelected: true, iconClass: "" }, { id: 2, value: 'Afternoon', isSelected: false, iconClass: "" }, { id: 3, value: 'Night', isSelected: false, iconClass: "" }]}
-                                type="Action"
+                                data={page1json.chipsChoice}
+                                type="Choice"
                                 onClick={(item, data) => action(item, data)}
                             />
                         </div>
-                        <div className="col-md-1"></div>
-                        <div className="col-md-6" style={{ marginTop: '30px' }}>
+                        <div className="col-md-7">
                             <BlocxChips
-                                data={[{ id: 1, value: '09.00AM-09.30AM', isSelected: true }, { id: 2, value: '09.30AM-10.00AM', isSelected: false }, { id: 3, value: '10.00AM-10.30AM', isSelected: false }]}
-                                type="Filter"
+                                data={page1json.chipsTime1}
+                                type="Choice"
                                 onChange={(item, data) => filterChange(item, data)}
                             />
                         </div>
                     </div>
                 </div>
                 <br></br>
-                <div className="padss blocx-grid" style={{ paddingRight: '80px' }}>
-                    <div className="bgwhite col-md-12" style={{ width: '' }}>
+                <div className="padss blocx-grid doclist" >
+                    <div className="bgwhite col-md-12">
                         <div className="col-md-1">
                             <img className="image-male" src='/assets/images/male.png' alt="Card caption" />
                         </div>
-                        <div className="col-md-4" style={{ paddingTop: '0px' }}>
+                        <div className="col-md-4 docpro">
                             <div className="row-md-4">
                                 <p className="doc"><b>Atul Prakash</b></p>
                             </div>
@@ -321,8 +320,8 @@ class Page9 extends React.Component {
                                 <p className="info-doc">MBBS MD (Gen Med) DM (Cardiology)</p>
                             </div>
                         </div>
-                        <div className="col-md-3" style={{ paddingTop: '0px' }}>
-                            <div className="col-md-12" style={{ paddingTop: '0px' }}>
+                        <div className="col-md-3 docpro">
+                            <div className="col-md-12 docpro">
                                 <div className="row-md-6">
                                     <p><b>Senior Cardiologist</b></p>
                                 </div>
@@ -331,8 +330,8 @@ class Page9 extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-2" style={{ paddingTop: '0px' }}>
-                            <div className="col-md-12" style={{ paddingTop: '0px' }}>
+                        <div className="col-md-2 docpro">
+                            <div className="col-md-12 docpro">
                                 <div className="row-md-6">
                                     <p><b>Mon-Friday</b></p>
                                 </div>
@@ -341,36 +340,34 @@ class Page9 extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-2" style={{ paddingTop: '0px' }}>
+                        <div className="col-md-2 docpro">
                             <div className="col-md-12">
                                 <BlocxButton.Primary label="Select" onClick={this.onButtonClick.bind(this)}></BlocxButton.Primary>&nbsp;
                             </div>
                         </div>
-                        <div className="col-md-1"></div>
-                        <div className="col-md-4" style={{ marginTop: '' }}>
+                        <div className="col-md-5">
                             <BlocxChips
-                                data={[{ id: 1, value: 'Morning', isSelected: true, iconClass: "" }, { id: 2, value: 'Afternoon', isSelected: false, iconClass: "" }, { id: 3, value: 'Night', isSelected: false, iconClass: "" }]}
-                                type="Action"
+                                data={page1json.chipsChoice}
+                                type="Choice"
                                 onClick={(item, data) => action(item, data)}
                             />
                         </div>
-                        <div className="col-md-1"></div>
-                        <div className="col-md-6" style={{ marginTop: '30px' }}>
+                        <div className="col-md-7">
                             <BlocxChips
-                                data={[{ id: 1, value: '09.00AM-09.30AM', isSelected: true }, { id: 2, value: '09.30AM-10.00AM', isSelected: false }, { id: 3, value: '10.00AM-10.30AM', isSelected: false }]}
-                                type="Filter"
+                                data={page1json.chipsTime2}
+                                type="Choice"
                                 onChange={(item, data) => filterChange(item, data)}
                             />
                         </div>
                     </div>
                 </div>
                 <br></br>
-                <div className="padss blocx-grid" style={{ paddingRight: '80px' }}>
-                    <div className="bgwhite col-md-12" style={{ width: '' }}>
+                <div className="padss blocx-grid doclist" >
+                    <div className="bgwhite col-md-12">
                         <div className="col-md-1">
                             <img className="image-male" src='/assets/images/male.png' alt="Card caption" />
                         </div>
-                        <div className="col-md-4" style={{ paddingTop: '0px' }}>
+                        <div className="col-md-4 docpro">
                             <div className="row-md-4">
                                 <p className="doc"><b>Dyna N</b></p>
                             </div>
@@ -378,8 +375,8 @@ class Page9 extends React.Component {
                                 <p className="info-doc">MBBS MD (Gen Med) DM (Cardiology)</p>
                             </div>
                         </div>
-                        <div className="col-md-3" style={{ paddingTop: '0px' }}>
-                            <div className="col-md-12" style={{ paddingTop: '0px' }}>
+                        <div className="col-md-3 docpro">
+                            <div className="col-md-12 docpro">
                                 <div className="row-md-6">
                                     <p><b>Senior Cardiologist</b></p>
                                 </div>
@@ -388,8 +385,8 @@ class Page9 extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-2" style={{ paddingTop: '0px' }}>
-                            <div className="col-md-12" style={{ paddingTop: '0px' }}>
+                        <div className="col-md-2 docpro">
+                            <div className="col-md-12 docpro">
                                 <div className="row-md-6">
                                     <p><b>Mon-Friday</b></p>
                                 </div>
@@ -398,24 +395,23 @@ class Page9 extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-2" style={{ paddingTop: '0px' }}>
+                        <div className="col-md-2 docpro">
                             <div className="col-md-12">
                                 <BlocxButton.Primary label="Select" onClick={this.onButtonClick.bind(this)}></BlocxButton.Primary>&nbsp;
                             </div>
                         </div>
-                        <div className="col-md-1"></div>
-                        <div className="col-md-4" style={{ marginTop: '' }}>
+                        <div className="col-md-5">
                             <BlocxChips
-                                data={[{ id: 1, value: 'Morning', isSelected: true, iconClass: "" }, { id: 2, value: 'Afternoon', isSelected: false, iconClass: "" }, { id: 3, value: 'Night', isSelected: false, iconClass: "" }]}
-                                type="Action"
+                                data={page1json.chipsChoice}
+                                type="Choice"
                                 onClick={(item, data) => action(item, data)}
                             />
                         </div>
-                        <div className="col-md-1"></div>
-                        <div className="col-md-6" style={{ marginTop: '30px' }}>
+                        {/* <div className="col-md-1"></div> */}
+                        <div className="col-md-7">
                             <BlocxChips
-                                data={[{ id: 1, value: '09.00AM-09.30AM', isSelected: true }, { id: 2, value: '09.30AM-10.00AM', isSelected: false }, { id: 3, value: '10.00AM-10.30AM', isSelected: false }]}
-                                type="Filter"
+                                data={page1json.chipsTime3}
+                                type="Choice"
                                 onChange={(item, data) => filterChange(item, data)}
                             />
                         </div>
@@ -470,4 +466,4 @@ class Page9 extends React.Component {
         )
     }
 }
-export default Page9
+export default DoctorSelect

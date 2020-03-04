@@ -6,7 +6,7 @@ import product from '../app/assets/images/prod.png'
 import prodSuper from '../app/assets/images/prodSuperdrug.png';
 import prodBoosters from '../app/assets/images/prodBooter.png';
 
-class Page5 extends Component {
+class BuyProductModal extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -102,4 +102,4 @@ class Page5 extends Component {
         )
     }
 }
-export default Page5
+export default BuyProductModal

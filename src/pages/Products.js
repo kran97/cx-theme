@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom';
 import { BlocxButton, BlocxFooterBody, BlocxPagination, BlocxFooter, BlocxNavBar, BlocxDropdown, BlocxCard, BlocxCardText, BlocxCardBody, BlocxCardImage } from 'blocx-react-components';
 import page3json from '../json/page3.json';
 import page1json from '../json/page1.json';
-class Page3 extends React.Component {
+class Products extends React.Component {
   state = {
     redirect: false,
     prod_type: 'Select',
@@ -161,8 +161,9 @@ class Page3 extends React.Component {
                   </div>
                 </BlocxFooterBody.Grid>
               </div>
-              <div className="col-md-7">
+              <div className="col-md-6">
                 <BlocxFooterBody.Grid>
+                <div className="col-md-6"></div>
                   <div className="col-md-6">
                     <ul className="blocx-menu social-media">
                       <li><a href="#/"><i className="fa fa-instagram footr" aria-hidden="true"></i> </a></li>
@@ -181,4 +182,4 @@ class Page3 extends React.Component {
     )
   }
 }
-export default Page3
+export default Products

@@ -5,7 +5,7 @@ import page4json from '../json/page4.json';
 import page1json from '../json/page1.json';
 import tabledata from '../json/tabledata.json';
 
-const Page4 = props => {
+const BuyProducts = props => {
   const [items, setItems] = useState(page4json.tab);
   function handleClick(e, id) {
     items.forEach(item => item.isActive = false);
@@ -114,7 +114,7 @@ const Page4 = props => {
 eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</BlocxCardText.Text>
                 </div>
 
-                <BlocxButton.Primary label="BUY NOW" className="page4-button" onClick={() => props.history.push("/page5")}></BlocxButton.Primary>
+                <BlocxButton.Primary label="BUY NOW" className="page4-button" onClick={() => props.history.push("/buyproductmodal")}></BlocxButton.Primary>
 
               </BlocxCardBody.Right>
             </BlocxCardBody.Default>
@@ -157,8 +157,10 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
                 </div>
               </BlocxFooterBody.Grid>
             </div>
-            <div className="col-md-7">
+            <div className="col-md-6">
+             
               <BlocxFooterBody.Grid>
+              <div className="col-md-6"></div>
                 <div className="col-md-6">
                   <ul className="blocx-menu social-media">
                     <li><a href="#/"><i className="fa fa-instagram footr" aria-hidden="true"></i> </a></li>
@@ -175,5 +177,5 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
     </React.Fragment>
   )
 }
-export default Page4;
+export default BuyProducts;
 

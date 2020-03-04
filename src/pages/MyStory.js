@@ -5,7 +5,7 @@ import carouseljson from "../json/page6.json";
 import transform from "../app/assets/images/transform.png";
 import page1json from '../json/page1.json';
 
-class Page7 extends React.Component {
+class MyStory extends React.Component {
 
     constructor(props) {
 
@@ -119,7 +119,7 @@ class Page7 extends React.Component {
 
                     </div>
 
-                    <div className="col-md-6" style={{ width: '400px', height: '419px', left: '10%' }}>
+                    <div className="col-md-6 cardsty">
                         <BlocxCard.Variant5>
                             <BlocxCardBody.Default>
                                 <BlocxCardImage.Default src={transform} alt="a" >
@@ -235,4 +235,4 @@ class Page7 extends React.Component {
         )
     }
 }
-export default Page7
+export default MyStory
