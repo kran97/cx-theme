@@ -25,6 +25,94 @@
             "image": "../../card4.png"
         }
     ],
+    "successCardDetails":[
+        {
+            "id": "0",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.",
+            "image": "../../assets/images/card1.png"
+        },
+        {
+            "id": "1",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.",
+            "image": "../../assets/images/card2.png"
+        },
+        {
+            "id": "2",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.",
+            "image": "../../assets/images/card3.png"
+        },
+        {
+            "id": "3",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.",
+            "image": "../../assets/images/card4.png"
+        },
+        {
+            "id": "4",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.",
+            "image": "../../assets/images/card1.png"
+        },
+        {
+            "id": "5",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.",
+            "image": "../../assets/images/card2.png"
+        },
+        {
+            "id": "6",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.",
+            "image": "../../assets/images/card3.png"
+        },
+        {
+            "id": "7",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.",
+            "image": "../../assets/images/card4.png"
+        },
+        {
+            "id": "8",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.",
+            "image": "../../assets/images/card1.png"
+        },
+        {
+            "id": "9",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.",
+            "image": "../../assets/images/card2.png"
+        },
+        {
+            "id": "10",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.",
+            "image": "../../assets/images/card3.png"
+        },
+        {
+            "id": "11",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.",
+            "image": "../../assets/images/card4.png"
+        }
+    ],
+    "companyCardDetails":[
+        {
+            "id": "0",
+            "heading": "Top Employer",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.",
+            "image": "../../assets/images/page13image1.png"
+        },
+        {
+            "id": "1",
+            "heading": "Board of managing directors",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.",
+            "image": "../../assets/images/page13image2.png"
+        },
+        {
+            "id": "2",
+            "heading": "Organisation",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.",
+            "image": "../../assets/images/page13imag3.png"
+        },
+        {
+            "id": "3",
+            "heading": "Corporate Head",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.",
+            "image": "../../assets/images/page13image4.png"
+        }
+    ],
     "navbar":[
         {
             "id": "0",

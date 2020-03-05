@@ -102,9 +102,7 @@ const BuyProducts = props => {
                 <div className="page4-card">
                   <BlocxCardImage.Default src='../../card3.png' alt="Card image caption"></BlocxCardImage.Default>
                 </div>
-
               </BlocxCardBody.Left>
-
               <BlocxCardBody.Right>
                 <BlocxCardHeader.Default>
                   <span className="itemHeader">XLS-Nutrition Vanilla</span>
@@ -113,9 +111,7 @@ const BuyProducts = props => {
                   <BlocxCardText.Text>Greyhound divisively hello coldly wonderfully  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
 eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</BlocxCardText.Text>
                 </div>
-
                 <BlocxButton.Primary label="BUY NOW" className="page4-button" onClick={() => props.history.push("/buyproductmodal")}></BlocxButton.Primary>
-
               </BlocxCardBody.Right>
             </BlocxCardBody.Default>
           </BlocxCard.Variant9>
@@ -158,7 +154,6 @@ eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</Blocx
               </BlocxFooterBody.Grid>
             </div>
             <div className="col-md-6">
-             
               <BlocxFooterBody.Grid>
               <div className="col-md-6"></div>
                 <div className="col-md-6">

@@ -65,16 +65,10 @@ class GlobalSite extends Component {
         let itemListFooter1 = page1json.footer.footerMenu1.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
         let itemListFooter2 = page1json.footer.footerMenu2.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
         let itemListFooter3 = page1json.footer.footerMenu3.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
+        const cardInfo = [...page1json.companyCardDetails];
 
         return (
             <React.Fragment>
-                {/* <div>
-                    <BlocxNavBar
-                        data={page13json.items}
-                        onClick={(item, data) =>
-                            this.onClick(item, data)}>
-                    </BlocxNavBar>
-                </div> */}
                 <div>
                     <BlocxMegaMenu
                         data={megaMenuJson}
@@ -104,138 +98,69 @@ class GlobalSite extends Component {
                             <h3 className="col-sm-12 col-md-12 subsubheadingtext">More related contents</h3>
                         </div>
                         <div className='blocx-grid'>
-                            <div className="col-sm-12 col-md-6">
-                                <BlocxCard.Variant1>
-                                    <BlocxCardImage.Top src={require('../app/assets/images/page13image1.png')} />
-                                    <BlocxCardText.Text ><p className="col-sm-12 col-md-12 imageheading">Top Employer</p>
-                                    </BlocxCardText.Text>
-                                    <BlocxCardText.Text><p className="col-sm-12 col-md-12 textunderimage">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</p></BlocxCardText.Text>
-                                </BlocxCard.Variant1>
-                            </div>
-                            <div className="col-sm-12 col-md-6 ">
-                                <BlocxCard.Variant1>
-                                    <BlocxCardImage.Top src={require('../app/assets/images/page13image2.png')} />
-                                    <BlocxCardText.Text ><p className="col-sm-12 col-md-12 imageheading">Board of managing directors</p>
-                                    </BlocxCardText.Text>
-                                    <BlocxCardText.Text><p className="col-sm-12 col-md-12 textunderimage">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</p></BlocxCardText.Text>
-                                </BlocxCard.Variant1>
-                            </div>
-                            <div className="col-sm-12 col-md-6 ">
-                                <BlocxCard.Variant1>
-                                    <BlocxCardImage.Top src={require('../app/assets/images/page13imag3.png')} />
-                                    <BlocxCardText.Text ><p className="col-sm-12 col-md-12 imageheading">Organisation</p>
-                                    </BlocxCardText.Text>
-                                    <BlocxCardText.Text ><p className="col-sm-12 col-md-12 textunderimage">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</p></BlocxCardText.Text>
-                                </BlocxCard.Variant1>
-                            </div>
-                            <div className="col-sm-12 col-md-6 ">
-                                <BlocxCard.Variant1>
-                                    <BlocxCardImage.Top src={require('../app/assets/images/page13image4.png')} />
-                                    <BlocxCardText.Text ><p className="col-sm-12 col-md-12 imageheading">Corporate Head</p>
-                                    </BlocxCardText.Text>
-                                    <BlocxCardText.Text><p className="col-sm-12 col-md-12 textunderimage">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-eiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</p></BlocxCardText.Text>
-                                </BlocxCard.Variant1>
-                            </div>
+                            {cardInfo.map((item) => {
+                                return (
+                                    <div key={item.id} className="col-sm-12 col-md-6">
+                                        <BlocxCard.Variant1>
+                                            <BlocxCardImage.Top src={item.image} />
+                                            <BlocxCardText.Text ><p className="col-sm-12 col-md-12 imageheading">{item.heading}</p>
+                                            </BlocxCardText.Text>
+                                            <BlocxCardText.Text><p className="col-sm-12 col-md-12 textunderimage">{item.text}</p></BlocxCardText.Text>
+                                        </BlocxCard.Variant1>
+                                    </div>
+                                )
+                            })}
                         </div>
                     </div>
                     <div className="col-md-1 col-sm-0">
                     </div>
                 </div>
-
                 <div>
-
                     <BlocxFooter>
-
                         <BlocxFooterBody.Default>
-
                             <BlocxFooterBody.Grid>
-
                                 <div className="col-md-6">
-
                                     <BlocxFooterBody.Grid>
-
                                         <div className="col-md-3">
-
                                             <h1>Logo</h1>
-
                                         </div>
-
                                         <div className="col-md-3">
-
                                             <ul className="blocx-menu">
-
                                                 {itemListFooter1}
-
                                             </ul>
-
                                         </div>
-
                                         <div className="col-md-3">
-
                                             <ul className="blocx-menu">
-
                                                 {itemListFooter2}
-
                                             </ul>
-
                                         </div>
-
                                         <div className="col-md-3">
-
                                             <ul className="blocx-menu">
-
                                                 {itemListFooter3}
-
                                             </ul>
-
                                         </div>
-
                                     </BlocxFooterBody.Grid>
-
                                 </div>
-
                                 <div className="col-md-6">
-
                                     <BlocxFooterBody.Grid>
-
                                         <div className="col-md-6">
-
                                         </div>
-
                                         <div className="col-md-6">
-
                                             <ul className="blocx-menu social-media">
-
                                                 <li><a href="#/"><i className="fa fa-instagram footr" aria-hidden="true"></i> </a></li>
-
                                                 <li><a href="#/"><i className="fa fa-twitter footr" aria-hidden="true"></i> </a></li>
-
                                                 <li><a href="#/"><i className="fa fa-facebook footr" aria-hidden="true"></i> </a></li>
-
                                                 <li><a href="#/"><i className="fa fa-globe footr" aria-hidden="true"></i> </a></li>
-
                                             </ul>
-
                                         </div>
-
                                     </BlocxFooterBody.Grid>
-
                                 </div>
-
                             </BlocxFooterBody.Grid>
-
                         </BlocxFooterBody.Default>
-
                     </BlocxFooter>
-
                 </div>
             </React.Fragment>
         )
     }
-
 }
 export default GlobalSite
