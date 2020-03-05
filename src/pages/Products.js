@@ -19,7 +19,13 @@ class Products extends React.Component {
   }
   renderRedirect = () => {
     if (this.state.redirect) {
-      return <Redirect to='/buy products' />
+      return <Redirect to='/buyproductmodal' />
+    }
+  }
+
+  renderRedirectProductPage = () => {
+    if (this.state.redirect) {
+      return <Redirect to='/buyproductmodal' />
     }
   }
 
@@ -106,11 +112,13 @@ class Products extends React.Component {
 
                     <BlocxCardBody.Default>
 
-                      <BlocxCardBody.Left>
+                      <BlocxCardBody.Left onClick={this.setRedirect}>
                         <div className="cardLeft">
                           <BlocxCardImage.Default src={item.image} alt="Card caption"></BlocxCardImage.Default>
                         </div>
-                        <div className="cardLeft-text">
+                        <div className="cardLeft-text" onClick={this.setRedirect}>
+                          <BlocxCardText.Title>{item.prod_brand}</BlocxCardText.Title><label htmlFor="item">{item.category}</label>
+                          <BlocxCardText.Subtitle>color:{item.prod_col}</BlocxCardText.Subtitle>
                           <BlocxCardText.Text>{item.text}</BlocxCardText.Text>
                         </div>
                       </BlocxCardBody.Left>
@@ -130,12 +138,10 @@ class Products extends React.Component {
               )
             })
           }
-
           <div className="pagination">
             <BlocxPagination data={page3json.pagination} />
           </div>
         </div>
-
         <BlocxFooter className="footerBody">
           <BlocxFooterBody.Default>
             <BlocxFooterBody.Grid>
@@ -163,7 +169,7 @@ class Products extends React.Component {
               </div>
               <div className="col-md-6">
                 <BlocxFooterBody.Grid>
-                <div className="col-md-6"></div>
+                  <div className="col-md-6"></div>
                   <div className="col-md-6">
                     <ul className="blocx-menu social-media">
                       <li><a href="#/"><i className="fa fa-instagram footr" aria-hidden="true"></i> </a></li>

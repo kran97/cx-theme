@@ -16,7 +16,11 @@ class Pharma extends React.Component {
             <BlocxHeroCarousel className="heroBody" data={page1json.hero}></BlocxHeroCarousel>
           </BlocxHeroBody>
         </BlocxHero>
-        <div className="text">Our Products</div>
+        <div className="blocx-grid">
+          <div className="col-md-4 text">Our Products</div>
+          <div className="col-md-6"></div>
+          <div className="col-md-1"><a href="/products">View all</a></div>
+        </div>
         <div className="cardContainer blocx-grid">
           {
             cardInfo.map((item) => {
@@ -29,7 +33,7 @@ class Pharma extends React.Component {
                       <BlocxCardText.Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut ero labore et dolorea sed do eiusmod tempor.</BlocxCardText.Text>
                       <br></br>
                       <div className="blocx-card_links">
-                        <BlocxButton.Primary label="Buy Now" className="cardButton" onClick={() => this.props.history.push("/products")} ></BlocxButton.Primary>
+                        <BlocxButton.Primary label="Buy Now" className="cardButton" onClick={() => this.props.history.push("/buyproductmodal")} ></BlocxButton.Primary>
                       </div>
                     </BlocxCardBody.Default>
                   </BlocxCard.Variant5>
@@ -55,7 +59,7 @@ class Pharma extends React.Component {
                   Until I started XLS Medical”</h2>
                 <p>Scarlet - 21lbs*</p>
                 <div className="blocx-grid midBody-button">
-                  <div className="col-md-3"><BlocxButton.Primary label="MY STORY" className="btn2"></BlocxButton.Primary></div>
+                  <div className="col-md-3"><BlocxButton.Primary label="MY STORY" className="btn2" onClick={() => this.props.history.push("/my_story")}></BlocxButton.Primary></div>
                   <div className="col-md-5"><BlocxButton.Primary label="ALL OUR SUCCESS STORIES" className="btn2" onClick={() => this.props.history.push("/success_stories")}></BlocxButton.Primary></div>
                 </div>
               </div>
@@ -114,7 +118,7 @@ class Pharma extends React.Component {
               </div>
               <div className="col-md-6">
                 <BlocxFooterBody.Grid>
-                <div className="col-md-6"></div>
+                  <div className="col-md-6"></div>
                   <div className="col-md-6">
                     <ul className="blocx-menu social-media">
                       <li><a href="#/"><i className="fa fa-instagram footr" aria-hidden="true"></i> </a></li>
