@@ -11,15 +11,7 @@ const BuyProducts = props => {
     items.forEach(item => item.isActive = false);
     items[id].isActive = !items[id].isActive;
     setItems(items);
-    // if (id !== 0)
-    //   setShowComponent(true);
-    // else
-    //   setShowComponent(false)
   }
-
-  // const [showComponent, setShowComponent] = useState(false);
-
-  // const { data, showcheckbox } = props;
   const data = tabledata;
   const tableHeader = data.header;
   const tableHeaderKeys = Object.keys(tableHeader);
