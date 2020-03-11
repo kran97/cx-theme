@@ -1,7 +1,6 @@
 
 import React, { Component } from 'react';
 import { BlocxProgressIndicator, BlocxButton, BlocxNavBar, BlocxHero, BlocxHeroBody, BlocxHeroCarousel, BlocxDivider, BlocxFooter, BlocxFooterBody, BlocxModalBody, BlocxModalButtonControls, BlocxModalHeader, BlocxModal, BlocxContentBoxType } from "blocx-react-components";
-import UserForm from './UserForm';
 import page10json from '../json/page10.json';
 import page1json from '../json/page1.json';
 import classnames from 'classnames';
@@ -62,11 +61,9 @@ class User extends Component {
         if (this.props.onClick) {
             this.props.onClick(e)
         }
-        console.log('hi')
         this.setState({
             showModal: !this.state.showModal
         })
-        console.log("modal--->", (e.target.id) ? e.target.id + 'd' : 'closed');
         this.props.history.push("/doctor_appoinment");
     }
 
@@ -82,20 +79,8 @@ class User extends Component {
         }
     }
 
-    onClick = (item, data) => {
-        console.log("Clicked Item: ", item);
-        console.log("Menu Data: ", data);
-        console.log(UserForm);
-    }
     regex = "[A-Za-z]{3}";
-
-    onKeyUp = (val) => {
-        console.log(val)
-    }
-
-    onFocus = () => {
-
-    }
+ 
     render() {
         let itemListFooter1 = page1json.footer.footerMenu1.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
         let itemListFooter2 = page1json.footer.footerMenu2.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)

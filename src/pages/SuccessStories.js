@@ -20,7 +20,6 @@ class SuccessStories extends React.Component {
             let lastAtPos = fields["email"].lastIndexOf('@');
             let lastDotPos = fields["email"].lastIndexOf('.');
             if (!(lastAtPos < lastDotPos && lastAtPos > 0 && fields["email"].indexOf('@@') === -1 && lastDotPos > 2 && (fields["email"].length - lastDotPos) > 2)) {
-                // formIsValid = false;
                 errors["email"] = "Invalid email address";
             }
         }
@@ -29,7 +28,6 @@ class SuccessStories extends React.Component {
     handleChange(field, e) {
         let fields = this.state.fields;
         fields[field] = e.target.value;
-        // this.setState({fields});
         this.handleValidation()
     }
     handleClick() {

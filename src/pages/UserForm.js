@@ -52,11 +52,9 @@ class UserForm extends Component {
           : '';
     }
     this.setState({ errors: errors });
-    console.log(errors)
   }
 
   handleChange(field, val) {
-    console.log("here");
     let fields = this.state.fields;
     fields[field] = val;
     this.handleValidation()
@@ -67,7 +65,6 @@ class UserForm extends Component {
      if(this.state.errors.email === ''&&field==="email") {
       this.info.email = val;
     }
-    console.log(this.info);
 
   }
 
@@ -82,9 +79,7 @@ class UserForm extends Component {
       let myObject = {}
       sessionStorage.myObject = JSON.stringify(this.info);
       sessionStorage.setItem(myObject, sessionStorage.myObject)
-      console.log(this.info)
       this.props.history.push("/confirm_appoinment");
-      console.log(this.info)
     }
     else {
       this.props.history.push("/book_appoinment");

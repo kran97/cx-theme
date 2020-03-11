@@ -38,25 +38,7 @@ class GlobalSite extends Component {
             this.props.onClick();
         }
     }
-
-    onStateChange = (value) => {
-        console.log("isSubMenuOpen: ", value);
-    }
-
-    onMegaMenuClick = (item, data) => {
-        console.log("Clicked Item: ", item);
-        console.log("Menu Data: ", data);
-    }
-
-    onClick = (item, data) => {
-        console.log("Clicked Item: ", item);
-        console.log("Menu Data: ", data);
-    }
     regex = "[A-Za-z]{3}";
-
-    onKeyUp = (val) => {
-        console.log(val)
-    }
 
     onFocus = () => {
 

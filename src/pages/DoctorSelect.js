@@ -3,7 +3,7 @@ import '../styles/page8.css';
 import { BlocxHero, BlocxHeroBody, BlocxContentBox, BlocxDatePicker, BlocxChips, BlocxDropdown, BlocxButton, BlocxHeroCarousel, BlocxNavBar, BlocxFooter, BlocxFooterBody, BlocxProgressIndicator, BlocxContentBoxType } from "blocx-react-components";
 import carouseljson from "../json/carousel8.json";
 import navData from "../json/navData81.json";
-import logo from "../logo.svg"; //Not the required one
+import logo from "../logo.svg";
 import page1json from '../json/page1.json';
 
 class DoctorSelect extends React.Component {
@@ -27,7 +27,6 @@ class DoctorSelect extends React.Component {
             let lastAtPos = fields["email"].lastIndexOf('@');
             let lastDotPos = fields["email"].lastIndexOf('.');
             if (!(lastAtPos < lastDotPos && lastAtPos > 0 && fields["email"].indexOf('@@') === -1 && lastDotPos > 2 && (fields["email"].length - lastDotPos) > 2)) {
-                // formIsValid = false;
                 errors["email"] = "Invalid email address";
             }
         }
@@ -36,7 +35,6 @@ class DoctorSelect extends React.Component {
     handleChange(field, e) {
         let fields = this.state.fields;
         fields[field] = e.target.value;
-        // this.setState({fields});
         this.handleValidation()
     }
     handleClick() {
@@ -44,17 +42,6 @@ class DoctorSelect extends React.Component {
             this.props.onClick();
         }
     }
-
-    // onButtonClick() {
-    //     let totalSteps = this.newstate.totalSteps;
-    //     let activeStep = this.newstate.activeStep;
-    //     if (activeStep <= totalSteps) {
-    //         this.setState({
-    //             activeStep: activeStep + 1
-    //         })
-    //     }
-    //     this.props.history.push("/page10");
-    // }
     onButtonClick() {
         let totalSteps = this.newstate.totalSteps;
         let activeStep = this.newstate.activeStep;
@@ -68,16 +55,10 @@ class DoctorSelect extends React.Component {
 
     render() {
         const onClick = (item, data) => {
-            console.log("Clicked Item: ", item);
-            console.log("Menu Data: ", data);
         }
         const handleClick = (e) => {
-            console.log(e);
         }
         const action = (item, data) => {
-            console.log("clickedItem: ", item);
-            console.log("All items: ", data);
-            // item.isSelected ? alert("Item is removed from: " + item.value) : alert("Item is added to: " + item.value);
             for (var i = 0; i < data.length; i++) {
                 if (data[i].id === item.id) {
                     data[i].isSelected = !data[i].isSelected;
@@ -86,14 +67,11 @@ class DoctorSelect extends React.Component {
             return data;
         }
         const filterChange = (item, data) => {
-            console.log("clickedItem: ", item);
-            console.log("All items: ", data);
         }
         let itemListFooter1 = page1json.footer.footerMenu1.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
         let itemListFooter2 = page1json.footer.footerMenu2.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
         let itemListFooter3 = page1json.footer.footerMenu3.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
         let { activeStep, totalSteps } = this.newstate
-        // let { value1, value2 } = this.state
         return (
             <React.Fragment>
                 <div>

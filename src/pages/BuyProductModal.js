@@ -21,12 +21,10 @@ class BuyProductModal extends Component {
         this.setState({
             showModal: !this.state.showModal
         })
-        console.log("modal--->", (e.target.id) ? e.target.id + 'd' : 'closed');
     }
     render() {
         const { showModal } = this.state;
         const display = classnames({ 'block': showModal, 'none': !showModal });
-        //const { title } = this.props;
         return (
             <React.Fragment>
                 <BlocxModal.Default style={{ display: display }}>

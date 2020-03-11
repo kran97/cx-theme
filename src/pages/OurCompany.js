@@ -36,24 +36,8 @@ class OurCompany extends Component {
             this.props.onClick();
         }
     }
-
-    onClick = (item, data) => {
-        console.log("Clicked Item: ", item);
-        console.log("Menu Data: ", data);
-    }
     regex = "[A-Za-z]{3}";
 
-    onKeyUp = (val) => {
-        console.log(val)
-    }
-
-    onFocus = () => {
-
-    }
-
-    onStateChange = (value) => {
-        console.log("isSubMenuOpen: ", value);
-    }
     render() {
         let itemListFooter1 = page1json.footer.footerMenu1.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)
         let itemListFooter2 = page1json.footer.footerMenu2.map(item => <li key={item.id}> <a className="foot" href={item.url}> {item.label} </a> </li>)

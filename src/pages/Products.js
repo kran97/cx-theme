@@ -56,7 +56,6 @@ class Products extends React.Component {
       categoryArray.push(i.value);
     }
     let cardInfo = [...page3json.cards.items];
-    // let showCards=this.filterCard();
     let showCards = cardInfo.filter(
       (card) => {
         if (this.state.prod_type !== 'Select' && this.state.category === 'Select' && this.state.filterOperation)
@@ -70,7 +69,6 @@ class Products extends React.Component {
         if (!this.state.filterOperation && this.state.counter === 0)
           return card;
         else {
-          console.log("before", this.state.filteredCard)
           return card;
         }
       }
