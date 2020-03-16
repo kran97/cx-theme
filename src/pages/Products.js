@@ -19,13 +19,13 @@ class Products extends React.Component {
   }
   renderRedirect = () => {
     if (this.state.redirect) {
-      return <Redirect to='/buyproductmodal' />
+      return <Redirect to='/buyproducts' />
     }
   }
 
   renderRedirectProductPage = () => {
     if (this.state.redirect) {
-      return <Redirect to='/buyproductmodal' />
+      return <Redirect to='/buyproducts' />
     }
   }
 

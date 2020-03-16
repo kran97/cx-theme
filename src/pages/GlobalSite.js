@@ -54,8 +54,7 @@ class GlobalSite extends Component {
                 <div>
                     <BlocxMegaMenu
                         data={megaMenuJson}
-                        onClick={(item, data) => this.onMegaMenuClick(item, data)}
-                        onStateChange={(value) => this.onStateChange(value)} />
+                        />
                 </div>
                 <div>
                     <BlocxHero>

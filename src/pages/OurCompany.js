@@ -49,8 +49,7 @@ class OurCompany extends Component {
                 <div>
                     <BlocxMegaMenu
                         data={megaMenuJson}
-                        onClick={(item, data) => this.onClick(item, data)}
-                        onStateChange={(value) => this.onStateChange(value)} />
+                        />
                 </div>
                 <div>
                     <BlocxHero>

@@ -12,7 +12,7 @@ import MyStory from './pages/MyStory';
 import DoctorAppointment from './pages/DoctorAppointment';
 import BuyProductModal from './pages/BuyProductModal';
 import DoctorSelect from './pages/DoctorSelect';
-import Home from './pages/HomePage';
+// import Home from './pages/HomePage';
 
 function Routing() {
     return (
@@ -20,8 +20,8 @@ function Routing() {
         <Router>
             <div>
                 <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/pharma" component={Pharma} />
+                    {/* <Route exact path="/" component={Home} /> */}
+                    <Route exact path="/" component={Pharma} />
                     <Route path="/products" component={Products} />
                     <Route path="/buyproducts" component={BuyProducts} />
                     <Route path="/buyproductmodal" component={BuyProductModal} />
