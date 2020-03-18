@@ -75,7 +75,7 @@ class UserForm extends Component {
   }
   regex = "[A-Za-z]{3}";
   onButtonClick() {
-    if (this.state.errors.name === '' && this.state.errors.mobile === '' && this.state.errors.email === '') {
+    if (this.state.errors.name === '' && this.state.errors.mobile === '' && this.state.errors.email === ''&&this.state.fields.name!=''&&this.state.fields.email!=''&&this.state.fields.mobile!='') {
       let myObject = {}
       sessionStorage.myObject = JSON.stringify(this.info);
       sessionStorage.setItem(myObject, sessionStorage.myObject)
